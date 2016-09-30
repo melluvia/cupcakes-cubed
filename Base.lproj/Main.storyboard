@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--select-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="cupcakes_cubed" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                                 </constraints>
                             </imageView>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w2c-zD-2TN">
-                                <frame key="frameInset" minX="27" minY="275" height="216" maxX="28"/>
+                                <frame key="frameInset" minX="27" minY="275" height="216"/>
                             </pickerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h7L-JR-8IP">
                                 <frame key="frameInset" minX="148" minY="499" width="97" height="30"/>
@@ -83,7 +83,7 @@
                             <constraint firstItem="w2c-zD-2TN" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="cx3-Fl-McQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="select" id="qbE-7w-cby"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -333,7 +333,7 @@
             </objects>
             <point key="canvasLocation" x="3686" y="-299"/>
         </scene>
-        <!--Second-->
+        <!--Box-->
         <scene sceneID="aLl-dZ-cer">
             <objects>
                 <viewController id="UXm-It-Vdo" customClass="SecondViewController" customModule="cupcakes_cubed" customModuleProvider="target" sceneMemberID="viewController">
@@ -434,7 +434,7 @@
                             <constraint firstItem="zmL-kJ-BW8" firstAttribute="centerX" secondItem="Spa-1O-g3U" secondAttribute="centerX" id="vIX-tX-W8L"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="4tV-st-2TF"/>
+                    <tabBarItem key="tabBarItem" title="Box" image="second" id="4tV-st-2TF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8a-aQ-VXc" sceneMemberID="firstResponder"/>
             </objects>
@@ -642,7 +642,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="UdK-Z9-Nsp"/>
         <segue reference="f03-GT-qsX"/>
-        <segue reference="bPN-7K-NOM"/>
     </inferredMetricsTieBreakers>
 </document>
