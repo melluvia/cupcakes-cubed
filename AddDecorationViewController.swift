@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  cupcakes-cubed
 //
 //  Created by Melissa Phillips on 9/29/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class AddDecorationViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
