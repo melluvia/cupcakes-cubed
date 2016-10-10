@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "lemon-drop.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "lemon-drop.jpg",
+      "filename" : "lemon-drop@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "lemon-drop@3x.png",
       "scale" : "3x"
     }
   ],
