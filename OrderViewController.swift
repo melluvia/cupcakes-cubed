@@ -9,10 +9,9 @@
 import UIKit
 
 
-class ChooseYourCupcakesViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 	
 	@IBOutlet weak var cupcakeView: UIImageView!
-	@IBOutlet weak var addToBagBtn: UIButton!
 	@IBOutlet weak var PickerView: UIPickerView!
 	@IBOutlet weak var price: UILabel!
 	@IBOutlet weak var saveSpinner: UIActivityIndicatorView!
@@ -25,25 +24,23 @@ class ChooseYourCupcakesViewController: UIViewController, UIPickerViewDataSource
 	var amountComponent = 2
 	
 	
-	
+	let formatter = NumberFormatter()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		saveSpinner.isHidden = true
-		addToBagBtn.isEnabled = false
+
 		
+		price.text = "$3.50"
+		
+		formatter.numberStyle = .currency
 	}
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 
 	}
-	
-	//how to disable save button until pickerview is used?
-//	func textFieldDidBeginEditing(_ textField: UITextField) {
-//		// Disable the Save button while editing.
-//		saveButton.isEnabled = false
-//	}
 	
 	// From the UIPickerViewDataSource protocol.
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -67,13 +64,11 @@ class ChooseYourCupcakesViewController: UIViewController, UIPickerViewDataSource
 		} else {
 			return String(amountNumber[row])
 		}
-		
 	}
 	
 	// From the UIPickerViewDelegate protocol.
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		
-		addToBagBtn.isEnabled = true
 		
 		if component == flavorsComponent {
 			switch row {
@@ -94,32 +89,30 @@ class ChooseYourCupcakesViewController: UIViewController, UIPickerViewDataSource
 			default: cupcakeView.image = #imageLiteral(resourceName: "french-riviera-cupcake")
 			}
 			
+
+			
 		} else {
-			return
+			
+			price.text = formatter.string(from: 3.50 * Double(amountNumber[row]) as NSNumber)
 		}
 		
-		//need to cache selections and put in the singleton of the cart.
 	}
 
-	@IBAction func addToBag(_ sender: UIButton) {
-		addToBagBtn.isEnabled = false
+	@IBAction func addOrder(_ sender: UIButton) {
 		
-		let flavor = flavorTitles.description
-		let amount = amountNumber.description
-		let price = self.price.description
+//		addOrderBtn.isEnabled = false
 		
-		saveSpinner.isHidden = false
-		saveSpinner.startAnimating()
+		let image = cupcakeView.image
+		let amount = PickerView.selectedRow(inComponent: 0)
+		let flavor = PickerView.selectedRow(inComponent: 1)
+		let price = self.price.text ?? ""
 		
-		if order == nil {
-			order = OrderData(flavor: flavor, amount: Int(amount)!, price: Double(price)!)
-		} else {
-			order?.flavorTitle = flavor
-			order?.itemAmount = Int(amount)!
-			order?.price = Double(price)!
-		}
-		
-		self.performSegue(withIdentifier: "unwindToMyBag", sender: self)
+		order?.itemAmount = Int(amount)
+		order?.flavorTitle = String(flavor)
+		order?.itemPhoto = image!
+		order?.price = Double(price)!
+
+		self.performSegue(withIdentifier: "gotoMyOrder", sender: self)
 	}
 }
 

@@ -13,6 +13,7 @@ class OrderData: NSObject, NSCoding {
 	var flavorTitle: String
 	var itemAmount: Int
 	var price: Double
+	var itemPhoto: UIImage
 	
 	// MARK: Archiving Paths
  
@@ -26,23 +27,20 @@ class OrderData: NSObject, NSCoding {
 		static let flavorKey = "flavor"
 		static let amountKey = "amount"
 		static let priceKey = "price"
+		static let photoKey = "photo"
 	}
 	
 	//	 MARK: Initialization
  
-	init?(flavor: String, amount: Int, price: Double) {
+	init?(flavor: String, amount: Int, price: Double, photo: UIImage) {
 		
 		// Initialize stored properties.
 		self.flavorTitle = flavor
 		self.itemAmount = amount
 		self.price = price
+		self.itemPhoto = photo
 		
 		super.init()
-		
-		// Initialization should fail if there is no name or if the rating is negative.
-		if flavor.isEmpty {
-			return nil
-		}
 	}
 	
 	//	 MARK: NSCoding
@@ -52,6 +50,7 @@ class OrderData: NSObject, NSCoding {
 		aCoder.encode(flavorTitle, forKey: PropertyKey.flavorKey)
 		aCoder.encode(itemAmount, forKey: PropertyKey.amountKey)
 		aCoder.encode(price, forKey: PropertyKey.priceKey)
+		aCoder.encode(itemPhoto, forKey: PropertyKey.photoKey)
 	}
 	
 	required convenience init?(coder aDecoder: NSCoder) {
@@ -62,8 +61,11 @@ class OrderData: NSObject, NSCoding {
 		
 		let price = aDecoder.decodeInteger(forKey: PropertyKey.priceKey)
 		
+		let photo = aDecoder.decodeObject(forKey: PropertyKey.photoKey) as! UIImage
+		
 		
 		// Must call designated initializer.
-		self.init(flavor: flavor, amount: amount, price: Double(price))
+		self.init(flavor: flavor, amount: amount, price: Double(price), photo: photo)
 	}
+
 }
