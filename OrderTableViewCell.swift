@@ -14,10 +14,10 @@ class OrderTableViewCell: UITableViewCell {
 	
 
 	@IBOutlet weak var priceLabel: UILabel!
-	@IBOutlet weak var amountLabel: UILabel!
 	@IBOutlet weak var photoImageView: UIImageView!
 	@IBOutlet weak var flavorLabel: UILabel!
 	@IBOutlet weak var saveSpinner: UIActivityIndicatorView!
+	@IBOutlet weak var amountLabel: UILabel!
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()

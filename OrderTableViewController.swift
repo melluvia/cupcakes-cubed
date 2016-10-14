@@ -8,14 +8,13 @@
 
 import UIKit
 
-class OrderTableViewController: UIViewController, UINavigationControllerDelegate {
+class OrderTableViewController: UIViewController, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
 
 	@IBOutlet weak var tax: UILabel!
 	@IBOutlet weak var deliveryCost: UILabel!
-	@IBOutlet weak var checkout: UIButton!
+	@IBOutlet weak var tableView: UITableView!
+
 	// MARK: Properties
-	
-	var orders = [OrderData]()
 	
 	// Create a cache that uses keys of type NSString to point to types of UIImage.
 	var imageCache = NSCache<NSString, UIImage>()
@@ -55,23 +54,27 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
-		return orders.count
+		return ShoppingCart.sharedInstance.shoppingCartArray.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
 		// Table view cells are reused and should be dequeued using a cell identifier.
-		let cellIdentifier = "OrderTableViewCell"
+		let cellIdentifier = "orderTableViewCell"
 		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! OrderTableViewCell
 		
-		// Fetches the appropriate meal for the data source layout.
-		let order = orders[(indexPath as NSIndexPath).row]
+		// Fetches the appropriate order for the data source layout.
+		let order = ShoppingCart.sharedInstance.shoppingCartArray[(indexPath as NSIndexPath).row]
 		
-		cell.flavorLabel.text = order.flavorTitle
+		cell.flavorLabel.text = order.flavor
 		
-		cell.photoImageView.image = nil
+		cell.photoImageView.image = order.image
 		
-//		if imageCache.object(forKey: order.itemPhoto as NSString) != nil {
+		cell.amountLabel.text = String(describing: order.amount)
+		
+		cell.priceLabel.text = String(describing: order.price)
+		
+//		if imageCache.object(forKey: order.image as NSString) != nil {
 //			
 //			// If the URL for the photo is in the cache already - get the UIImage that belongs to it.
 //			cell.photoImageView.image = imageCache.object(forKey: order.itemPhoto)! as NSString;)
@@ -91,7 +94,7 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 //		}
 }
 
-
+//add singleton to this
 
 
 

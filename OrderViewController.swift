@@ -18,10 +18,14 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 	
 	var order: OrderData?
 	
+	var priceAmount: Double = 0.0
+	
 	var flavorTitles = ["Chocolate", "Wedding Cake", "Red Velvet", "Lemon Drop", "tuxedo", "Oreo", "Carrot Cake", "Vanilla Chocolate", "The French Riviera", "Peanut Butter and Jelly", "Black Raspberry Chip", "Almond Creme", "Vanilla Wafer", "Snickerdoodle"]
 	var amountNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 	var flavorsComponent = 1
 	var amountComponent = 2
+	
+	var currentFlavor = ""
 	
 	
 	let formatter = NumberFormatter()
@@ -33,6 +37,8 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 
 		
 		price.text = "$3.50"
+		priceAmount = 3.5
+		cupcakeView.image = #imageLiteral(resourceName: "chocolate-cupcake")
 		
 		formatter.numberStyle = .currency
 	}
@@ -59,6 +65,7 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 	
 	// From the UIPickerViewDataSource protocol.
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		
 		if component == flavorsComponent {
 			return flavorTitles[row]
 		} else {
@@ -93,26 +100,32 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 			
 		} else {
 			
-			price.text = formatter.string(from: 3.50 * Double(amountNumber[row]) as NSNumber)
+			priceAmount = 3.50 * Double(amountNumber[row])
+			price.text = formatter.string(from: priceAmount as NSNumber)
 		}
 		
 	}
 
 	@IBAction func addOrder(_ sender: UIButton) {
-		
-//		addOrderBtn.isEnabled = false
-		
+				
 		let image = cupcakeView.image
 		let amount = PickerView.selectedRow(inComponent: 0)
-		let flavor = PickerView.selectedRow(inComponent: 1)
-		let price = self.price.text ?? ""
+		let flavor = String(PickerView.selectedRow(inComponent: 1))
+		let price = priceAmount //Double(self.price.text ?? "")
 		
-		order?.itemAmount = Int(amount)
-		order?.flavorTitle = String(flavor)
-		order?.itemPhoto = image!
-		order?.price = Double(price)!
+		order = OrderData(flavor: flavor, amount: amount, price: price, image: image!)
+		
+		if let order = order {
+			
+			ShoppingCart.sharedInstance.shoppingCartArray.append(order)
+			
+			self.performSegue(withIdentifier: "gotoMyOrder", sender: self)
+			
+		} else {
+			// TOOO: Alert
+		}
 
-		self.performSegue(withIdentifier: "gotoMyOrder", sender: self)
+
 	}
 }
 

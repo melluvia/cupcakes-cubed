@@ -8,11 +8,14 @@
 
 import Foundation
 
-class Order {
+class Order: NSObject {
 	
-	var flavorTitle: String = ""
+	var flavorTitle: String?
 	var itemAmount: Int = 0
 	var price: Double = 0.0
-	var photoUrl: String?
-
+	var itemPhoto: String?
+	
+	func printFlavor() {
+		print(flavorTitle)
+	}
 }

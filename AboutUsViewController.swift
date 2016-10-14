@@ -6,4 +6,16 @@
 //  Copyright © 2016 Melissa Phillips Design. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class AboutUsViewController: UIViewController {
+	
+	@IBOutlet weak var aboutLabel: UILabel!
+	
+	func aboutLabelChange() {
+		
+		aboutLabel.lineBreakMode = .byWordWrapping // or NSLineBreakMode.ByWordWrapping
+		aboutLabel.numberOfLines = 10
+	}
+
+}
