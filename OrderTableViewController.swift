@@ -36,7 +36,7 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 
 		imageCache.countLimit = 50 // Cache up to 50 UIImage(s)
 
-		let img = UIImage(named: "my-bag")!.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+		let img = UIImage(named: "edit-symbol")!.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
 
 		// Use the edit button item provided by the table view controller.
 		let rightBarButtonItem = UIBarButtonItem(image: img,
