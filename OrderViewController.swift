@@ -73,6 +73,15 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 		}
 	}
 	
+	func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+		
+		if component == flavorsComponent {
+			return 220
+		} else {
+			return 30
+		}
+	}
+	
 	// From the UIPickerViewDelegate protocol.
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		
@@ -117,7 +126,7 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 		
 		if let order = order {
 			
-			ShoppingCart.sharedInstance.shoppingCartArray.append(order)
+			ShoppingCart.sharedInstance.items.append(order)
 			
 			self.performSegue(withIdentifier: "gotoMyOrder", sender: self)
 			

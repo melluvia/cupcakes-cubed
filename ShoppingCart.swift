@@ -16,7 +16,7 @@ class ShoppingCart {
 	// This prevents others from using the default '()' initializer for this class.
 	private init() {
 		
-		self.shoppingCartArray = [OrderData]()
+		self.items = [OrderData]()
 	}
 	
 //	static let sharedInstance : ShoppingCart = {
@@ -26,7 +26,7 @@ class ShoppingCart {
 	
 	//MARK: Local Variable
 	
-	var shoppingCartArray : [OrderData]
+	var items : [OrderData]
 	
 	//MARK: Init
 	

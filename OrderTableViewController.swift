@@ -14,7 +14,7 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 	@IBOutlet weak var deliveryCost: UILabel!
 	@IBOutlet weak var tableView: UITableView!
 	
-	var order = ShoppingCart.sharedInstance.shoppingCartArray
+	//var order = ShoppingCart.sharedInstance.shoppingCartArray
 	
 	func onEditBtn(sender: UIBarButtonItem) {
 		
@@ -49,7 +49,7 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 		
 		self.tableView.reloadData()
 		
-		order += loadOrderFromArchiver()!
+		ShoppingCart.sharedInstance.items += loadOrderFromArchiver()!
 
 	}
 
@@ -72,7 +72,7 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
-		return ShoppingCart.sharedInstance.shoppingCartArray.count
+		return ShoppingCart.sharedInstance.items.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,7 +82,7 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! OrderTableViewCell
 		
 		// Fetches the appropriate order for the data source layout.
-		let order = ShoppingCart.sharedInstance.shoppingCartArray[(indexPath as NSIndexPath).row]
+		let order = ShoppingCart.sharedInstance.items[(indexPath as NSIndexPath).row]
 		
 		cell.flavorLabel.text = order.flavor
 		
@@ -110,37 +110,18 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 		if editingStyle == .delete {
 			
 			// Find the OrderData in the data source that we wish to delete.
-			let orderToRemove = order[indexPath.row]
+			//let orderToRemove = order[indexPath.row]
 			
-			//have to remove orders from a singleton?
-//			ShoppingCart.sharedInstance.removeOrder(orderToRemove: orderToRemove,
-			
-//			  completion: {
-//				
-//				self.order.remove(at: (indexPath as NSIndexPath).row)
-//				tableView.deleteRows(at: [indexPath], with: .fade)
-//			},
-//			  
-//			  error: {
-//				let alertController = UIAlertController(title: "Remove Failed",
-//														message: "Oops! We couldn't remove your Order at this time.",
-//														preferredStyle: .alert)
-//				
-//				let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-//						alertController.addAction(okAction)
-//					
-//				self.present(alertController, animated: true, completion: nil)
-//			})
-//			
-//		} else {
-			
+			tableView.beginUpdates()
 			// Delete the row from the data source
-			order.remove(at: (indexPath as NSIndexPath).row)
+			ShoppingCart.sharedInstance.items.remove(at: (indexPath as NSIndexPath).row)
 				
 			// Save the meals.
 			saveOrderToArchiver()
 			
 			tableView.deleteRows(at: [indexPath], with: .fade)
+			
+			tableView.endUpdates()
 		}
 	}
 	
@@ -148,7 +129,7 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 	
 	func saveOrderToArchiver() {
 		
-		let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(order, toFile: OrderData.ArchiveURL.path)
+		let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(ShoppingCart.sharedInstance.items, toFile: OrderData.ArchiveURL.path)
 		
 		if !isSuccessfulSave {
 			print("Failed to save orders...")
