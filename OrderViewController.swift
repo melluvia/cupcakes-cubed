@@ -82,6 +82,59 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 		}
 	}
 	
+	func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+		
+		if component == flavorsComponent {
+
+			var pickerLabel: UILabel
+			
+			if view == nil {
+				
+				// If view is nil, no UIView is available to recycle, so create a new one!
+				pickerLabel = UILabel()
+				
+			} else {
+				
+				// If view is not nil - cast it and then reuse it.
+				pickerLabel = view as! UILabel
+				
+			}
+			
+			let titleData = flavorTitles[row]
+			
+			let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Helvetica Neue", size: 20.0)!,NSForegroundColorAttributeName:UIColor.black])
+
+			pickerLabel.attributedText = myTitle
+			pickerLabel.textAlignment = .right
+			
+			return pickerLabel
+			
+		} else {
+			
+			var pickerLabel: UILabel
+			
+			if view == nil {
+				
+				// If view is nil, no UIView is available to recycle, so create a new one!
+				pickerLabel = UILabel()
+				
+			} else {
+				
+				// If view is not nil - cast it and then reuse it.
+				pickerLabel = view as! UILabel
+				
+			}
+			
+			let amountData = amountNumber[row]
+			
+			let myAmount = NSAttributedString(string: String(amountData), attributes: [NSFontAttributeName:UIFont(name: "Helvetica Neue", size: 20.0)!,NSForegroundColorAttributeName:UIColor.black])
+			
+			pickerLabel.attributedText = myAmount
+			pickerLabel.textAlignment = .left
+			
+			return pickerLabel
+		}
+	}
 	// From the UIPickerViewDelegate protocol.
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		

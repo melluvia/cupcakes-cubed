@@ -21,9 +21,11 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZv-pP-V6E">
-                                <frame key="frameInset" minX="30" minY="158" width="314" height="190"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZv-pP-V6E">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="138-yd-S1h"/>
+                                    <constraint firstAttribute="height" constant="190" id="V5O-2N-KWC"/>
+                                </constraints>
                                 <string key="text">Enjoy the same fresh ingredients and carefully crafted treats you experience in our bakery for your next meeting, sales appointment, party, wedding, graduation, or whatever the occasion may be.  Cupcakes can be customized with company logo, event date, school logos, initials as well as special toppers. There is no better way to show someone how much you care than to surprise them with our wide variety of cupcakes.
 Cupcakes can be customized any way you like, for example, we can decorate with your company, sport team, or school logo, or themed decorations for birthday parties, showers, and weddings.
 </string>
@@ -31,14 +33,18 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="big-plate-cupakes" translatesAutoresizingMaskIntoConstraints="NO" id="J5L-Xt-NbT">
-                                <frame key="frameInset" width="375" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="big-plate-cupakes" translatesAutoresizingMaskIntoConstraints="NO" id="J5L-Xt-NbT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="KeI-tK-hCF"/>
+                                    <constraint firstAttribute="height" constant="150" id="dcF-Xe-xPz"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7m-lb-J1u">
-                                <frame key="frameInset" minX="122" minY="356" width="130" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7m-lb-J1u">
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.32156862749999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="HxR-Jb-BRb"/>
+                                    <constraint firstAttribute="height" constant="50" id="afu-Vo-erl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Order Now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,6 +52,15 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="J5L-Xt-NbT" firstAttribute="leading" secondItem="gKn-R0-dh2" secondAttribute="leading" id="3zy-ie-nyg"/>
+                            <constraint firstItem="l7m-lb-J1u" firstAttribute="centerX" secondItem="gKn-R0-dh2" secondAttribute="centerX" id="In2-MM-mkS"/>
+                            <constraint firstItem="MZv-pP-V6E" firstAttribute="top" secondItem="J5L-Xt-NbT" secondAttribute="bottom" constant="8" id="TVg-Qb-XiA"/>
+                            <constraint firstItem="J5L-Xt-NbT" firstAttribute="top" secondItem="E5o-4I-qyo" secondAttribute="bottom" id="bjz-GC-VQt"/>
+                            <constraint firstItem="l7m-lb-J1u" firstAttribute="top" secondItem="MZv-pP-V6E" secondAttribute="bottom" constant="8" id="k9Z-Tg-HVg"/>
+                            <constraint firstAttribute="trailing" secondItem="J5L-Xt-NbT" secondAttribute="trailing" id="kbx-JZ-dfi"/>
+                            <constraint firstItem="MZv-pP-V6E" firstAttribute="centerX" secondItem="gKn-R0-dh2" secondAttribute="centerX" id="sQ4-lw-xLg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Catering" id="Vts-27-2kL"/>
                 </viewController>
@@ -62,14 +77,14 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2c-zD-2TN">
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="3af-pi-Z79"/>
+                                    <constraint firstAttribute="width" constant="375" id="d9x-sc-JF4"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="oMd-nv-gTP"/>
@@ -78,27 +93,17 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kL6-hV-Eb0">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="188" id="1IU-qp-tqv"/>
-                                    <constraint firstAttribute="height" constant="188" id="JLZ-iz-71D"/>
+                                    <constraint firstAttribute="width" constant="188" id="4rO-dI-sbG"/>
+                                    <constraint firstAttribute="height" constant="188" id="P2X-9y-6bp"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xPb-wv-SNi" userLabel="Save Spinner"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62c-WA-y09">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="26M-ee-Sno"/>
-                                    <constraint firstAttribute="width" constant="66" id="c5T-Gs-8ux"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqW-sc-L6q" userLabel="AddOrderBtn">
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.32156862749999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4DR-nG-QuR"/>
-                                    <constraint firstAttribute="width" constant="130" id="sbB-Wr-ttT"/>
+                                    <constraint firstAttribute="width" constant="130" id="fYT-fi-lOk"/>
+                                    <constraint firstAttribute="height" constant="50" id="jdt-BO-zpi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Add to Order">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -106,21 +111,33 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                     <action selector="addOrder:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Omf-wb-Pon"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xPb-wv-SNi" userLabel="Save Spinner"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62c-WA-y09">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="5f2-7X-cV4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kL6-hV-Eb0" firstAttribute="top" secondItem="w2c-zD-2TN" secondAttribute="bottom" id="Egi-rf-UQk"/>
-                            <constraint firstItem="xqW-sc-L6q" firstAttribute="centerX" secondItem="xPb-wv-SNi" secondAttribute="centerX" id="LtD-OX-DWO"/>
-                            <constraint firstItem="w2c-zD-2TN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="MT0-q1-yX4"/>
-                            <constraint firstItem="xqW-sc-L6q" firstAttribute="centerX" secondItem="62c-WA-y09" secondAttribute="centerX" id="PKI-At-Lmf"/>
-                            <constraint firstItem="xPb-wv-SNi" firstAttribute="top" secondItem="xqW-sc-L6q" secondAttribute="bottom" constant="8" symbolic="YES" id="Q0m-0A-FMi"/>
-                            <constraint firstItem="w2c-zD-2TN" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="16" id="S1E-8I-3u9"/>
-                            <constraint firstItem="62c-WA-y09" firstAttribute="top" secondItem="kL6-hV-Eb0" secondAttribute="bottom" constant="8" symbolic="YES" id="TAD-73-7GE"/>
-                            <constraint firstItem="kL6-hV-Eb0" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="XjM-Mx-ogN"/>
-                            <constraint firstItem="62c-WA-y09" firstAttribute="centerX" secondItem="kL6-hV-Eb0" secondAttribute="centerX" id="he0-vc-BLZ"/>
-                            <constraint firstItem="w2c-zD-2TN" firstAttribute="centerX" secondItem="kL6-hV-Eb0" secondAttribute="centerX" id="iK4-JY-mWe"/>
-                            <constraint firstItem="xqW-sc-L6q" firstAttribute="top" secondItem="62c-WA-y09" secondAttribute="bottom" constant="19" id="s45-3G-6mo"/>
+                            <constraint firstItem="xPb-wv-SNi" firstAttribute="centerX" secondItem="w2c-zD-2TN" secondAttribute="centerX" id="TRs-Gb-I8T"/>
+                            <constraint firstItem="62c-WA-y09" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="YBd-mF-eqw"/>
+                            <constraint firstItem="62c-WA-y09" firstAttribute="centerX" secondItem="xqW-sc-L6q" secondAttribute="centerX" id="Zjy-ho-dJf"/>
+                            <constraint firstItem="w2c-zD-2TN" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bGx-Ks-O51"/>
+                            <constraint firstItem="w2c-zD-2TN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="cAp-75-wqt"/>
+                            <constraint firstItem="kL6-hV-Eb0" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="cFD-xZ-mWI"/>
+                            <constraint firstItem="kL6-hV-Eb0" firstAttribute="centerX" secondItem="w2c-zD-2TN" secondAttribute="centerX" id="jRR-YO-ZkZ"/>
+                            <constraint firstItem="kL6-hV-Eb0" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="kYZ-iS-FBa"/>
+                            <constraint firstItem="62c-WA-y09" firstAttribute="top" secondItem="kL6-hV-Eb0" secondAttribute="bottom" constant="18" id="kvG-vh-hC1"/>
+                            <constraint firstItem="kL6-hV-Eb0" firstAttribute="top" secondItem="w2c-zD-2TN" secondAttribute="bottom" id="nSQ-aq-V5d"/>
+                            <constraint firstItem="kL6-hV-Eb0" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="136" id="pKa-pd-7o0"/>
+                            <constraint firstItem="xPb-wv-SNi" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="296" id="pv1-Vm-Ea4"/>
+                            <constraint firstItem="xqW-sc-L6q" firstAttribute="top" secondItem="kL6-hV-Eb0" secondAttribute="bottom" constant="47" id="t4S-7G-Iej"/>
+                            <constraint firstItem="w2c-zD-2TN" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="zxF-6q-oER"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Choose Your Cupcakes" id="ksV-9M-DwD"/>
@@ -134,7 +151,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2263.1999999999998" y="-773.16341829085468"/>
+            <point key="canvasLocation" x="-1671" y="-844"/>
         </scene>
         <!--Schedule Delivery-->
         <scene sceneID="zML-Lm-4oC">
@@ -148,197 +165,174 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Date and Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUY-Hz-HYQ">
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqb-go-8ne">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1000" id="mNK-I0-W6N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fUV-5V-Smz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2NE-ao-D4P">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glz-ta-zKZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" text="Apt #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asw-VW-Fb2">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="121" id="KK7-nR-NT1"/>
+                                    <constraint firstAttribute="height" constant="28" id="mGs-Pw-DGd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHZ-ci-OYX">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQj-CK-gxR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="10m-ZV-7Wf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-Yr-gyz">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9k-Dt-NJ7">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FJU-YY-u0K">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJ6-71-PPU">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fqV-hu-U1a">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6o-g1-K6l">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cM5-Ro-Uvf">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13S-oE-Ifv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="8vQ-o2-cwT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zs-0N-9Xm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-Pu-X4E">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gcl-6A-0dW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="xSx-s8-cpF"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="496948929.85793501">
                                     <!--2016-09-30 17:22:09 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9r-hJ-ja0">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Apartment Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYn-de-ROA">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="153" id="Gah-BX-u00"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QX2-UT-Yp2">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="5Y0-G4-x3r"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4g-Rv-ScE">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="47" id="IqD-j4-1dk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqb-go-8ne">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqU-Fa-K1M">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWi-Ua-Ovy">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="asd-CB-XWt">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y76-Vw-Rfd">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-Qv-3KL">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZ8-vK-bpg">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="59" id="o6g-XW-fx1"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Naj-to-qC8">
-                                <color key="onTintColor" red="0.88235294119999996" green="0.32156862749999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                            </switch>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add a Note..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N5h-1Y-aJI">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="INP-1c-aQH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="save my information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuM-T1-ylR">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGy-3e-73n">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCX-de-ruT">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8D-QB-cKI">
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.32156862749999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="w8X-6Q-Sl2"/>
+                                    <constraint firstAttribute="width" constant="226" id="88X-WB-Sd1"/>
+                                    <constraint firstAttribute="height" constant="50" id="d6x-Tn-4p9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Confirm and Continue to Checkout">
+                                <state key="normal" title="Confirm &amp; Checkout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Wah-8N-oXS" kind="show" id="M78-CG-AEw"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2NE-ao-D4P">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="164" id="5LG-Kk-wQ9"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fUV-5V-Smz" firstAttribute="trailing" secondItem="N5h-1Y-aJI" secondAttribute="trailing" id="0n8-TD-aC7"/>
-                            <constraint firstItem="uGy-3e-73n" firstAttribute="centerY" secondItem="ZCX-de-ruT" secondAttribute="centerY" id="48X-Dd-qoa"/>
-                            <constraint firstItem="ZCX-de-ruT" firstAttribute="trailing" secondItem="asd-CB-XWt" secondAttribute="trailing" id="4JI-wY-5bK"/>
-                            <constraint firstItem="iWi-Ua-Ovy" firstAttribute="top" secondItem="FuM-T1-ylR" secondAttribute="bottom" constant="4" id="4ms-lm-q7X"/>
-                            <constraint firstItem="FuM-T1-ylR" firstAttribute="leading" secondItem="Naj-to-qC8" secondAttribute="trailing" constant="8" symbolic="YES" id="5Dw-Uw-JGu"/>
-                            <constraint firstItem="Naj-to-qC8" firstAttribute="centerX" secondItem="uGy-3e-73n" secondAttribute="centerX" id="6dS-Dh-L2I"/>
-                            <constraint firstItem="N5h-1Y-aJI" firstAttribute="top" secondItem="fUV-5V-Smz" secondAttribute="bottom" id="7oW-D1-d51"/>
-                            <constraint firstItem="fUV-5V-Smz" firstAttribute="top" secondItem="gUY-Hz-HYQ" secondAttribute="bottom" id="7ve-8j-Mts"/>
-                            <constraint firstItem="Y9r-hJ-ja0" firstAttribute="centerY" secondItem="y76-Vw-Rfd" secondAttribute="centerY" id="8Nr-JO-cfh"/>
-                            <constraint firstItem="iWi-Ua-Ovy" firstAttribute="trailing" secondItem="ZCX-de-ruT" secondAttribute="trailing" id="8vy-rL-f33"/>
-                            <constraint firstItem="jYn-de-ROA" firstAttribute="leading" secondItem="Y9r-hJ-ja0" secondAttribute="leading" id="9sN-Hl-1nZ"/>
-                            <constraint firstItem="y76-Vw-Rfd" firstAttribute="top" secondItem="lqb-go-8ne" secondAttribute="bottom" constant="8" symbolic="YES" id="BbP-7f-Xcj"/>
-                            <constraint firstItem="e4g-Rv-ScE" firstAttribute="centerY" secondItem="sZ8-vK-bpg" secondAttribute="centerY" id="CX9-EN-kne"/>
-                            <constraint firstItem="6Yd-Qv-3KL" firstAttribute="top" secondItem="jYn-de-ROA" secondAttribute="bottom" constant="17" id="ECL-hG-nLv"/>
-                            <constraint firstItem="2NE-ao-D4P" firstAttribute="trailing" secondItem="sZ8-vK-bpg" secondAttribute="trailing" id="EWl-GH-9Un"/>
-                            <constraint firstItem="uGy-3e-73n" firstAttribute="leading" secondItem="G9Q-aW-ffd" secondAttribute="leadingMargin" constant="12" id="G1m-Ac-4Yk"/>
-                            <constraint firstItem="gUY-Hz-HYQ" firstAttribute="centerX" secondItem="G9Q-aW-ffd" secondAttribute="centerX" id="Ii5-DI-eMu"/>
-                            <constraint firstItem="gUY-Hz-HYQ" firstAttribute="top" secondItem="e4g-Rv-ScE" secondAttribute="bottom" constant="10" id="JcW-dk-RUx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iWi-Ua-Ovy" secondAttribute="trailing" constant="17" id="KzS-TT-oLn"/>
-                            <constraint firstItem="Naj-to-qC8" firstAttribute="centerY" secondItem="FuM-T1-ylR" secondAttribute="centerY" id="LSA-nG-evm"/>
-                            <constraint firstItem="FuM-T1-ylR" firstAttribute="leading" secondItem="iWi-Ua-Ovy" secondAttribute="leading" id="LrZ-e9-8Vd"/>
-                            <constraint firstItem="ZCX-de-ruT" firstAttribute="leading" secondItem="uGy-3e-73n" secondAttribute="trailing" constant="3" id="O3T-kX-f5c"/>
-                            <constraint firstItem="2NE-ao-D4P" firstAttribute="trailing" secondItem="y76-Vw-Rfd" secondAttribute="trailing" id="P7f-W7-BdS"/>
-                            <constraint firstItem="c8D-QB-cKI" firstAttribute="trailing" secondItem="N5h-1Y-aJI" secondAttribute="trailing" id="RH7-ZJ-Dg4"/>
-                            <constraint firstItem="gUY-Hz-HYQ" firstAttribute="leading" secondItem="G9Q-aW-ffd" secondAttribute="leadingMargin" constant="99" id="Rp8-BF-pOx"/>
-                            <constraint firstItem="NAz-Dd-zKp" firstAttribute="top" secondItem="c8D-QB-cKI" secondAttribute="bottom" constant="72" id="SKe-Ui-tGd"/>
-                            <constraint firstItem="asd-CB-XWt" firstAttribute="baseline" secondItem="lqb-go-8ne" secondAttribute="firstBaseline" id="SN8-c0-PIk"/>
-                            <constraint firstItem="lqb-go-8ne" firstAttribute="top" secondItem="uGy-3e-73n" secondAttribute="bottom" constant="7" id="TpW-TP-vfI"/>
-                            <constraint firstItem="asd-CB-XWt" firstAttribute="leading" secondItem="lqb-go-8ne" secondAttribute="trailing" constant="8" symbolic="YES" id="XeB-X4-iPu"/>
-                            <constraint firstItem="uGy-3e-73n" firstAttribute="top" secondItem="gqU-Fa-K1M" secondAttribute="bottom" constant="5" id="Z4c-Gc-dKZ"/>
-                            <constraint firstItem="QX2-UT-Yp2" firstAttribute="centerY" secondItem="6Yd-Qv-3KL" secondAttribute="centerY" id="ZLr-x5-MN8"/>
-                            <constraint firstItem="2NE-ao-D4P" firstAttribute="top" secondItem="y76-Vw-Rfd" secondAttribute="bottom" constant="1" id="arp-JO-cta"/>
-                            <constraint firstItem="e4g-Rv-ScE" firstAttribute="leading" secondItem="6Yd-Qv-3KL" secondAttribute="trailing" constant="5" id="bE5-oM-zRW"/>
-                            <constraint firstItem="QX2-UT-Yp2" firstAttribute="top" secondItem="G9Q-aW-ffd" secondAttribute="top" constant="213" id="c0X-Iv-vbe"/>
-                            <constraint firstItem="jYn-de-ROA" firstAttribute="top" secondItem="G9Q-aW-ffd" secondAttribute="top" constant="167" id="cyU-8q-owh"/>
-                            <constraint firstItem="asd-CB-XWt" firstAttribute="top" secondItem="ZCX-de-ruT" secondAttribute="bottom" constant="2" id="dJj-5p-ATq"/>
-                            <constraint firstItem="c8D-QB-cKI" firstAttribute="leading" secondItem="N5h-1Y-aJI" secondAttribute="leading" id="de3-cu-OD6"/>
-                            <constraint firstItem="e4g-Rv-ScE" firstAttribute="top" secondItem="y76-Vw-Rfd" secondAttribute="bottom" constant="40" id="eCj-1Y-M9Q"/>
-                            <constraint firstItem="Naj-to-qC8" firstAttribute="top" secondItem="cut-wz-ccl" secondAttribute="bottom" constant="8" symbolic="YES" id="eVS-6e-C4S"/>
-                            <constraint firstItem="Naj-to-qC8" firstAttribute="leading" secondItem="lqb-go-8ne" secondAttribute="leading" id="eoN-vv-9OX"/>
-                            <constraint firstItem="fUV-5V-Smz" firstAttribute="top" secondItem="QX2-UT-Yp2" secondAttribute="bottom" constant="18" id="erb-A0-fOy"/>
-                            <constraint firstItem="6Yd-Qv-3KL" firstAttribute="leading" secondItem="QX2-UT-Yp2" secondAttribute="trailing" constant="4" id="gEC-PP-3vM"/>
-                            <constraint firstItem="ZCX-de-ruT" firstAttribute="top" secondItem="iWi-Ua-Ovy" secondAttribute="bottom" constant="2" id="ieV-yS-hWl"/>
-                            <constraint firstItem="jYn-de-ROA" firstAttribute="leading" secondItem="QX2-UT-Yp2" secondAttribute="leading" id="jUM-HN-dBp"/>
-                            <constraint firstItem="sZ8-vK-bpg" firstAttribute="top" secondItem="y76-Vw-Rfd" secondAttribute="bottom" constant="38" id="kp5-lp-Vec"/>
-                            <constraint firstItem="lqb-go-8ne" firstAttribute="leading" secondItem="Y9r-hJ-ja0" secondAttribute="leading" id="l1D-Zw-v2C"/>
-                            <constraint firstItem="jYn-de-ROA" firstAttribute="top" secondItem="y76-Vw-Rfd" secondAttribute="bottom" constant="2" id="n3g-mh-ZbT"/>
-                            <constraint firstItem="fUV-5V-Smz" firstAttribute="leading" secondItem="gqU-Fa-K1M" secondAttribute="leading" id="pSK-rd-M7Y"/>
-                            <constraint firstItem="QX2-UT-Yp2" firstAttribute="leading" secondItem="fUV-5V-Smz" secondAttribute="leading" id="pu4-0F-BLv"/>
-                            <constraint firstItem="Naj-to-qC8" firstAttribute="leading" secondItem="G9Q-aW-ffd" secondAttribute="leadingMargin" constant="10" id="s2s-pW-pU3"/>
-                            <constraint firstItem="y76-Vw-Rfd" firstAttribute="leading" secondItem="Y9r-hJ-ja0" secondAttribute="trailing" constant="4" id="sfh-ES-sYP"/>
-                            <constraint firstItem="sZ8-vK-bpg" firstAttribute="leading" secondItem="e4g-Rv-ScE" secondAttribute="trailing" constant="2" id="vNK-g5-xZ9"/>
-                            <constraint firstItem="c8D-QB-cKI" firstAttribute="leading" secondItem="G9Q-aW-ffd" secondAttribute="leadingMargin" constant="10" id="yk6-zJ-Kff"/>
-                            <constraint firstItem="asd-CB-XWt" firstAttribute="trailing" secondItem="y76-Vw-Rfd" secondAttribute="trailing" id="zBX-6H-f7E"/>
+                            <constraint firstItem="NHZ-ci-OYX" firstAttribute="centerY" secondItem="cM5-Ro-Uvf" secondAttribute="centerY" id="1OL-fj-ryR"/>
+                            <constraint firstItem="I6o-g1-K6l" firstAttribute="top" secondItem="fqV-hu-U1a" secondAttribute="bottom" constant="2" id="5nY-kU-6YU"/>
+                            <constraint firstItem="Gcl-6A-0dW" firstAttribute="leading" secondItem="G9Q-aW-ffd" secondAttribute="leadingMargin" constant="11" id="6PO-gF-FRD"/>
+                            <constraint firstItem="I6o-g1-K6l" firstAttribute="leading" secondItem="asw-VW-Fb2" secondAttribute="trailing" constant="2" id="6UQ-m8-NXe"/>
+                            <constraint firstItem="FJU-YY-u0K" firstAttribute="trailing" secondItem="e2m-Pu-X4E" secondAttribute="trailing" id="7fi-A5-3Pg"/>
+                            <constraint firstItem="Glz-ta-zKZ" firstAttribute="leading" secondItem="G9Q-aW-ffd" secondAttribute="leadingMargin" constant="15" id="9Ji-KI-51x"/>
+                            <constraint firstItem="eQj-CK-gxR" firstAttribute="leading" secondItem="cM5-Ro-Uvf" secondAttribute="trailing" constant="5" id="9cb-tI-eF2"/>
+                            <constraint firstItem="fqV-hu-U1a" firstAttribute="trailing" secondItem="I6o-g1-K6l" secondAttribute="trailing" id="AUW-rM-DSd"/>
+                            <constraint firstItem="mJ6-71-PPU" firstAttribute="leading" secondItem="RDj-Yr-gyz" secondAttribute="trailing" constant="7" id="AWo-BU-3De"/>
+                            <constraint firstItem="FJU-YY-u0K" firstAttribute="leading" secondItem="e2m-Pu-X4E" secondAttribute="leading" id="Bd0-Go-rAf"/>
+                            <constraint firstItem="2NE-ao-D4P" firstAttribute="leading" secondItem="G9Q-aW-ffd" secondAttribute="leading" constant="869" id="D5g-m7-PlE"/>
+                            <constraint firstItem="c8D-QB-cKI" firstAttribute="top" secondItem="Gcl-6A-0dW" secondAttribute="bottom" constant="2" id="Egs-zf-RY0"/>
+                            <constraint firstItem="lqb-go-8ne" firstAttribute="leading" secondItem="G9Q-aW-ffd" secondAttribute="leading" id="FbH-Rf-LYi"/>
+                            <constraint firstItem="cM5-Ro-Uvf" firstAttribute="leading" secondItem="NHZ-ci-OYX" secondAttribute="trailing" constant="8" symbolic="YES" id="K16-vp-UL2"/>
+                            <constraint firstItem="1Zs-0N-9Xm" firstAttribute="leading" secondItem="RDj-Yr-gyz" secondAttribute="leading" id="LBi-Ae-tIi"/>
+                            <constraint firstItem="I6o-g1-K6l" firstAttribute="trailing" secondItem="13S-oE-Ifv" secondAttribute="trailing" id="LPA-a8-8Jx"/>
+                            <constraint firstItem="Gcl-6A-0dW" firstAttribute="top" secondItem="NHZ-ci-OYX" secondAttribute="bottom" constant="8" symbolic="YES" id="NNJ-T1-EdL"/>
+                            <constraint firstItem="1Zs-0N-9Xm" firstAttribute="top" secondItem="h9k-Dt-NJ7" secondAttribute="bottom" constant="10" id="O3c-n1-0j7"/>
+                            <constraint firstItem="Glz-ta-zKZ" firstAttribute="leading" secondItem="asw-VW-Fb2" secondAttribute="leading" id="QsF-vP-4Yn"/>
+                            <constraint firstItem="eQj-CK-gxR" firstAttribute="bottom" secondItem="13S-oE-Ifv" secondAttribute="bottom" id="RJX-Iv-mRD"/>
+                            <constraint firstItem="fqV-hu-U1a" firstAttribute="leading" secondItem="Glz-ta-zKZ" secondAttribute="trailing" constant="4" id="Utx-xx-4Vb"/>
+                            <constraint firstItem="RDj-Yr-gyz" firstAttribute="leading" secondItem="NHZ-ci-OYX" secondAttribute="leading" id="VmH-yj-EzL"/>
+                            <constraint firstItem="h9k-Dt-NJ7" firstAttribute="leading" secondItem="1Zs-0N-9Xm" secondAttribute="leading" id="Wz1-BB-zbF"/>
+                            <constraint firstItem="NHZ-ci-OYX" firstAttribute="top" secondItem="asw-VW-Fb2" secondAttribute="bottom" constant="8" symbolic="YES" id="Xaz-DL-WhD"/>
+                            <constraint firstItem="Glz-ta-zKZ" firstAttribute="top" secondItem="RDj-Yr-gyz" secondAttribute="bottom" constant="14" id="YAW-Cb-ubF"/>
+                            <constraint firstItem="cM5-Ro-Uvf" firstAttribute="centerY" secondItem="eQj-CK-gxR" secondAttribute="centerY" id="YCn-oQ-h68"/>
+                            <constraint firstItem="Gcl-6A-0dW" firstAttribute="trailing" secondItem="13S-oE-Ifv" secondAttribute="trailing" id="adP-79-rcU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FJU-YY-u0K" secondAttribute="trailing" constant="18" id="d1i-24-JNa"/>
+                            <constraint firstItem="FJU-YY-u0K" firstAttribute="leading" secondItem="h9k-Dt-NJ7" secondAttribute="trailing" constant="6" id="ehD-zw-Hgh"/>
+                            <constraint firstItem="h9k-Dt-NJ7" firstAttribute="leading" secondItem="G9Q-aW-ffd" secondAttribute="leadingMargin" constant="16" id="f3L-Bl-db6"/>
+                            <constraint firstItem="RDj-Yr-gyz" firstAttribute="top" secondItem="1Zs-0N-9Xm" secondAttribute="bottom" constant="11" id="hTo-8b-snd"/>
+                            <constraint firstItem="fqV-hu-U1a" firstAttribute="top" secondItem="mJ6-71-PPU" secondAttribute="bottom" constant="3" id="mHW-xH-kDX"/>
+                            <constraint firstItem="e2m-Pu-X4E" firstAttribute="trailing" secondItem="mJ6-71-PPU" secondAttribute="trailing" id="opQ-Fl-tLH"/>
+                            <constraint firstItem="e2m-Pu-X4E" firstAttribute="top" secondItem="FJU-YY-u0K" secondAttribute="bottom" constant="2" id="qHY-4e-dcl"/>
+                            <constraint firstItem="NAz-Dd-zKp" firstAttribute="top" secondItem="c8D-QB-cKI" secondAttribute="bottom" constant="87" id="rOe-ed-6YA"/>
+                            <constraint firstItem="I6o-g1-K6l" firstAttribute="centerX" secondItem="G9Q-aW-ffd" secondAttribute="centerX" constant="27" id="rp7-30-B68"/>
+                            <constraint firstItem="2NE-ao-D4P" firstAttribute="top" secondItem="G9Q-aW-ffd" secondAttribute="top" constant="166" id="scw-H3-G2n"/>
+                            <constraint firstItem="mJ6-71-PPU" firstAttribute="top" secondItem="e2m-Pu-X4E" secondAttribute="bottom" constant="2" id="seV-7u-bh1"/>
+                            <constraint firstItem="asw-VW-Fb2" firstAttribute="top" secondItem="Glz-ta-zKZ" secondAttribute="bottom" constant="5" id="siR-Hu-Zy5"/>
+                            <constraint firstItem="mJ6-71-PPU" firstAttribute="trailing" secondItem="fqV-hu-U1a" secondAttribute="trailing" id="tYc-Lc-3OO"/>
+                            <constraint firstItem="lqb-go-8ne" firstAttribute="top" secondItem="NAz-Dd-zKp" secondAttribute="bottom" constant="313" id="xbv-oG-H4v"/>
+                            <constraint firstItem="13S-oE-Ifv" firstAttribute="top" secondItem="I6o-g1-K6l" secondAttribute="bottom" constant="2" id="yFs-Hg-VzQ"/>
+                            <constraint firstItem="c8D-QB-cKI" firstAttribute="centerX" secondItem="G9Q-aW-ffd" secondAttribute="centerX" id="ydd-ar-fgc"/>
+                            <constraint firstItem="13S-oE-Ifv" firstAttribute="leading" secondItem="eQj-CK-gxR" secondAttribute="trailing" constant="6" id="z4b-E3-uce"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule Delivery" id="iDZ-Oc-hax"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWn-1j-2ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2834.4000000000001" y="1252.6236881559221"/>
+            <point key="canvasLocation" x="-3052" y="1252.6236881559221"/>
         </scene>
         <!--Order Confirmation-->
         <scene sceneID="3vS-wU-C3L">
@@ -361,27 +355,6 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgY-Cf-teR">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="HT8-T2-oY0"/>
-                                </constraints>
-                                <state key="normal" title="flikr">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSx-HJ-NHW">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="KJU-CS-ECM"/>
-                                </constraints>
-                                <state key="normal" title="Instagram">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSf-nt-Ovy">
-                                <state key="normal" title="Pinterest">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgQ-xQ-ouY">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="265" id="GOe-lS-slt"/>
@@ -396,11 +369,6 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUu-7H-D5x">
-                                <state key="normal" title="facebook">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following order is scheduled for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqQ-J5-5NI">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cb3-H9-b3T"/>
@@ -440,57 +408,83 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdK-MZ-NYU">
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.32156862749999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="YBy-Ru-aVT"/>
+                                    <constraint firstAttribute="height" constant="50" id="uaU-3D-ck8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title=" recieve an email receipt">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZjV-fF-mgy">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="400" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="JmY-Po-6pd">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6uU-VE-sU8"/>
+                                            <constraint firstAttribute="width" constant="30" id="Fmt-Wr-RZ0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flickr" translatesAutoresizingMaskIntoConstraints="NO" id="Xe8-a5-MnC">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="8Xn-Dy-Q12"/>
+                                            <constraint firstAttribute="height" constant="30" id="UML-gD-ret"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinterest" translatesAutoresizingMaskIntoConstraints="NO" id="AZb-Dy-YH4">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Cd3-MI-cuK"/>
+                                            <constraint firstAttribute="height" constant="30" id="dx2-mR-g8l"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="dCA-3v-FEB">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="H94-82-O5y"/>
+                                            <constraint firstAttribute="width" constant="30" id="T4h-GH-Z9X"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dCA-3v-FEB" firstAttribute="leading" secondItem="AZb-Dy-YH4" secondAttribute="trailing" constant="15" id="FPk-55-2FQ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5Xa-Rh-poB" firstAttribute="top" secondItem="LLF-gj-b2i" secondAttribute="bottom" constant="28" id="0ED-6x-ZV3"/>
-                            <constraint firstItem="fFc-Wh-SUl" firstAttribute="top" secondItem="zdK-MZ-NYU" secondAttribute="bottom" constant="55" id="14M-RC-PH4"/>
                             <constraint firstItem="HgQ-xQ-ouY" firstAttribute="leading" secondItem="LLF-gj-b2i" secondAttribute="trailing" constant="3" id="1IP-Wq-Ugg"/>
-                            <constraint firstItem="BSf-nt-Ovy" firstAttribute="leading" secondItem="NgY-Cf-teR" secondAttribute="trailing" constant="40" id="1PZ-NH-r1o"/>
-                            <constraint firstItem="5Xa-Rh-poB" firstAttribute="trailing" secondItem="cSx-HJ-NHW" secondAttribute="trailing" id="23m-KX-eB1"/>
                             <constraint firstItem="pdd-8L-nzS" firstAttribute="leading" secondItem="Nkg-DZ-o97" secondAttribute="trailing" constant="2" id="3qJ-Gm-6DH"/>
-                            <constraint firstItem="cSx-HJ-NHW" firstAttribute="baseline" secondItem="NgY-Cf-teR" secondAttribute="baseline" id="51e-9V-Yjj"/>
+                            <constraint firstItem="5Xa-Rh-poB" firstAttribute="centerX" secondItem="uZs-Rb-Dg8" secondAttribute="centerX" id="77H-mJ-Sd6"/>
+                            <constraint firstItem="5Xa-Rh-poB" firstAttribute="top" secondItem="LLF-gj-b2i" secondAttribute="bottom" constant="26" id="9PM-Z7-LAN"/>
                             <constraint firstItem="kqQ-J5-5NI" firstAttribute="top" secondItem="GaE-ua-Jng" secondAttribute="bottom" constant="29" id="Aj1-Xd-IGe"/>
-                            <constraint firstItem="oUu-7H-D5x" firstAttribute="baseline" secondItem="NgY-Cf-teR" secondAttribute="baseline" id="Bc0-ZP-j8f"/>
+                            <constraint firstItem="5Xa-Rh-poB" firstAttribute="centerX" secondItem="ldP-oP-Hhe" secondAttribute="centerX" id="DD0-w9-L1e"/>
+                            <constraint firstItem="kqQ-J5-5NI" firstAttribute="centerX" secondItem="uZs-Rb-Dg8" secondAttribute="centerX" id="DMb-6a-qnh"/>
+                            <constraint firstItem="5Xa-Rh-poB" firstAttribute="trailing" secondItem="HgQ-xQ-ouY" secondAttribute="trailing" id="Dau-N9-BfE"/>
                             <constraint firstItem="ldP-oP-Hhe" firstAttribute="top" secondItem="kqQ-J5-5NI" secondAttribute="bottom" constant="22" id="F5t-ao-K0U"/>
-                            <constraint firstItem="cdi-Sn-mBo" firstAttribute="top" secondItem="cSx-HJ-NHW" secondAttribute="bottom" constant="49" id="Fdz-ol-ADn"/>
                             <constraint firstItem="LLF-gj-b2i" firstAttribute="leading" secondItem="Nkg-DZ-o97" secondAttribute="leading" id="H0b-me-F49"/>
-                            <constraint firstItem="HgQ-xQ-ouY" firstAttribute="trailing" secondItem="5Xa-Rh-poB" secondAttribute="trailing" id="Hw1-O7-kWa"/>
                             <constraint firstItem="HgQ-xQ-ouY" firstAttribute="top" secondItem="pdd-8L-nzS" secondAttribute="bottom" constant="8" id="IKU-me-Gny"/>
-                            <constraint firstItem="NgY-Cf-teR" firstAttribute="leading" secondItem="uZs-Rb-Dg8" secondAttribute="leading" constant="110" id="InE-Et-l7O"/>
-                            <constraint firstItem="cSx-HJ-NHW" firstAttribute="baseline" secondItem="BSf-nt-Ovy" secondAttribute="baseline" id="JGl-Q7-Apy"/>
-                            <constraint firstItem="NgY-Cf-teR" firstAttribute="top" secondItem="fFc-Wh-SUl" secondAttribute="bottom" constant="8" symbolic="YES" id="OFu-Xv-2pn"/>
-                            <constraint firstItem="fFc-Wh-SUl" firstAttribute="leading" secondItem="uZs-Rb-Dg8" secondAttribute="leading" constant="124" id="TOJ-Ee-17h"/>
-                            <constraint firstItem="oUu-7H-D5x" firstAttribute="leading" secondItem="uZs-Rb-Dg8" secondAttribute="leadingMargin" constant="11" id="Ur0-DD-p8Y"/>
+                            <constraint firstItem="5Xa-Rh-poB" firstAttribute="centerY" secondItem="uZs-Rb-Dg8" secondAttribute="centerY" id="MG0-1X-U9n"/>
+                            <constraint firstItem="fFc-Wh-SUl" firstAttribute="centerX" secondItem="uZs-Rb-Dg8" secondAttribute="centerX" id="O1A-ci-SyJ"/>
+                            <constraint firstItem="fFc-Wh-SUl" firstAttribute="top" secondItem="zdK-MZ-NYU" secondAttribute="bottom" constant="36" id="On1-Y9-dvP"/>
                             <constraint firstItem="LLF-gj-b2i" firstAttribute="baseline" secondItem="HgQ-xQ-ouY" secondAttribute="baseline" id="Xln-JV-ZTy"/>
-                            <constraint firstItem="NgY-Cf-teR" firstAttribute="leading" secondItem="oUu-7H-D5x" secondAttribute="trailing" constant="37" id="YtB-iW-hQ0"/>
-                            <constraint firstItem="cSx-HJ-NHW" firstAttribute="leading" secondItem="BSf-nt-Ovy" secondAttribute="trailing" constant="40" id="aGx-Ud-ifX"/>
                             <constraint firstItem="pdd-8L-nzS" firstAttribute="leading" secondItem="Nkg-DZ-o97" secondAttribute="trailing" constant="2" id="avv-o4-jXZ"/>
+                            <constraint firstItem="ZjV-fF-mgy" firstAttribute="centerX" secondItem="uZs-Rb-Dg8" secondAttribute="centerX" id="g0Q-TG-JUA"/>
                             <constraint firstItem="pdd-8L-nzS" firstAttribute="top" secondItem="ldP-oP-Hhe" secondAttribute="bottom" constant="3" id="g3T-4o-Mx8"/>
-                            <constraint firstItem="5Xa-Rh-poB" firstAttribute="centerX" secondItem="uZs-Rb-Dg8" secondAttribute="centerX" id="h2n-op-9i2"/>
                             <constraint firstItem="Nkg-DZ-o97" firstAttribute="baseline" secondItem="pdd-8L-nzS" secondAttribute="baseline" id="htZ-cj-1c4"/>
-                            <constraint firstItem="zdK-MZ-NYU" firstAttribute="top" secondItem="5Xa-Rh-poB" secondAttribute="bottom" constant="10" id="i13-Bg-kvw"/>
                             <constraint firstAttribute="bottom" secondItem="fFc-Wh-SUl" secondAttribute="bottom" constant="87" id="jXn-Pw-wg0"/>
                             <constraint firstItem="LLF-gj-b2i" firstAttribute="firstBaseline" secondItem="HgQ-xQ-ouY" secondAttribute="firstBaseline" id="kVw-eq-Si5"/>
-                            <constraint firstItem="zdK-MZ-NYU" firstAttribute="trailing" secondItem="5Xa-Rh-poB" secondAttribute="trailing" id="mPY-XZ-azP"/>
-                            <constraint firstItem="kqQ-J5-5NI" firstAttribute="leading" secondItem="uZs-Rb-Dg8" secondAttribute="leadingMargin" constant="59" id="uR0-59-qov"/>
+                            <constraint firstItem="ZjV-fF-mgy" firstAttribute="top" secondItem="fFc-Wh-SUl" secondAttribute="bottom" constant="8" id="rUg-Lz-6HQ"/>
                             <constraint firstItem="HgQ-xQ-ouY" firstAttribute="trailing" secondItem="pdd-8L-nzS" secondAttribute="trailing" id="vCt-Ek-G55"/>
                             <constraint firstItem="Nkg-DZ-o97" firstAttribute="leading" secondItem="uZs-Rb-Dg8" secondAttribute="leadingMargin" constant="29" id="x7F-c2-hAc"/>
+                            <constraint firstItem="zdK-MZ-NYU" firstAttribute="trailing" secondItem="5Xa-Rh-poB" secondAttribute="trailing" id="xaX-XB-uVu"/>
                             <constraint firstItem="Nkg-DZ-o97" firstAttribute="top" secondItem="kqQ-J5-5NI" secondAttribute="bottom" constant="46" id="yWR-7G-Biu"/>
-                            <constraint firstItem="ldP-oP-Hhe" firstAttribute="centerX" secondItem="5Xa-Rh-poB" secondAttribute="centerX" id="yWY-b4-dkW"/>
-                            <constraint firstItem="zdK-MZ-NYU" firstAttribute="leading" secondItem="LLF-gj-b2i" secondAttribute="leading" id="yh7-ha-obt"/>
+                            <constraint firstItem="zdK-MZ-NYU" firstAttribute="leading" secondItem="LLF-gj-b2i" secondAttribute="leading" constant="2" id="ytV-Z7-BcM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Order Confirmation" id="iEX-IC-gq0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6S6-b1-4gA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1797.5999999999999" y="1252.6236881559221"/>
+            <point key="canvasLocation" x="-1599.2" y="1252.6236881559221"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eeh-z8-iX2">
@@ -544,7 +538,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         <viewControllerLayoutGuide type="bottom" id="YEO-m7-BQ9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zvk-8U-FKx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDA-ig-XDJ">
@@ -555,7 +549,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="add an optional note here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AQV-yH-Oav">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="174" id="dSi-1O-NQm"/>
+                                    <constraint firstAttribute="height" constant="200" id="3sd-C3-uLU"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -564,7 +558,8 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV7-R9-Dfc">
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.32156862749999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="pCx-j1-cNb"/>
+                                    <constraint firstAttribute="height" constant="50" id="0Ae-nw-x9b"/>
+                                    <constraint firstAttribute="width" constant="290" id="GWg-uH-NCY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Confirm &amp; Continue to Checkout">
@@ -574,7 +569,10 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                     <segue destination="Wah-8N-oXS" kind="show" id="xK7-4o-Cf7"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="45c-iq-1lP">
+                            <datePicker contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="45c-iq-1lP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="Xch-yz-Wyk"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="496948929.85793501">
                                     <!--2016-09-30 17:22:09 +0000-->
                                 </date>
@@ -582,25 +580,25 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="45c-iq-1lP" firstAttribute="centerX" secondItem="LDA-ig-XDJ" secondAttribute="centerX" id="1uO-Du-MZf"/>
-                            <constraint firstItem="VV7-R9-Dfc" firstAttribute="centerX" secondItem="zvk-8U-FKx" secondAttribute="centerX" id="37S-Zt-gu5"/>
-                            <constraint firstItem="45c-iq-1lP" firstAttribute="leading" secondItem="zvk-8U-FKx" secondAttribute="leading" id="H4g-x9-EhT"/>
-                            <constraint firstItem="VV7-R9-Dfc" firstAttribute="top" secondItem="AQV-yH-Oav" secondAttribute="bottom" constant="8" symbolic="YES" id="Jic-Ds-eWR"/>
-                            <constraint firstItem="AQV-yH-Oav" firstAttribute="centerX" secondItem="LDA-ig-XDJ" secondAttribute="centerX" id="LoE-DH-19t"/>
-                            <constraint firstItem="YEO-m7-BQ9" firstAttribute="top" secondItem="VV7-R9-Dfc" secondAttribute="bottom" constant="150" id="aJY-1J-LCP"/>
+                            <constraint firstItem="VV7-R9-Dfc" firstAttribute="leading" secondItem="zvk-8U-FKx" secondAttribute="leadingMargin" constant="26" id="3fN-DZ-vNk"/>
+                            <constraint firstItem="45c-iq-1lP" firstAttribute="centerX" secondItem="zvk-8U-FKx" secondAttribute="centerX" id="4O4-LV-AY3"/>
+                            <constraint firstItem="AQV-yH-Oav" firstAttribute="centerX" secondItem="zvk-8U-FKx" secondAttribute="centerX" id="8c4-Vp-Fn4"/>
+                            <constraint firstItem="45c-iq-1lP" firstAttribute="centerX" secondItem="LDA-ig-XDJ" secondAttribute="centerX" id="C7T-Xe-OGe"/>
+                            <constraint firstItem="VV7-R9-Dfc" firstAttribute="centerX" secondItem="zvk-8U-FKx" secondAttribute="centerX" id="Dw7-mc-XGK"/>
+                            <constraint firstItem="AQV-yH-Oav" firstAttribute="trailing" secondItem="VV7-R9-Dfc" secondAttribute="trailing" id="JZS-yi-QKL"/>
+                            <constraint firstItem="AQV-yH-Oav" firstAttribute="leading" secondItem="VV7-R9-Dfc" secondAttribute="leading" id="S3A-rG-ZGf"/>
+                            <constraint firstItem="AQV-yH-Oav" firstAttribute="top" secondItem="45c-iq-1lP" secondAttribute="bottom" constant="18" id="ZAo-0i-gz1"/>
                             <constraint firstItem="LDA-ig-XDJ" firstAttribute="top" secondItem="zvk-8U-FKx" secondAttribute="topMargin" constant="58" id="aQM-3s-Mls"/>
-                            <constraint firstItem="AQV-yH-Oav" firstAttribute="top" secondItem="45c-iq-1lP" secondAttribute="bottom" constant="8" symbolic="YES" id="cFu-Jm-me1"/>
-                            <constraint firstItem="AQV-yH-Oav" firstAttribute="leading" secondItem="VV7-R9-Dfc" secondAttribute="leading" id="hDy-Mt-y1Z"/>
-                            <constraint firstItem="AQV-yH-Oav" firstAttribute="leading" secondItem="zvk-8U-FKx" secondAttribute="leadingMargin" constant="51" id="hLC-VC-eaW"/>
-                            <constraint firstItem="45c-iq-1lP" firstAttribute="top" secondItem="VaN-eU-qta" secondAttribute="bottom" constant="98" id="k8j-Sl-Jlf"/>
-                            <constraint firstItem="AQV-yH-Oav" firstAttribute="trailing" secondItem="VV7-R9-Dfc" secondAttribute="trailing" id="tqC-Kz-0YM"/>
+                            <constraint firstItem="45c-iq-1lP" firstAttribute="centerX" secondItem="AQV-yH-Oav" secondAttribute="centerX" id="hkC-Vc-Mus"/>
+                            <constraint firstItem="VV7-R9-Dfc" firstAttribute="top" secondItem="AQV-yH-Oav" secondAttribute="bottom" constant="8" symbolic="YES" id="ixq-9P-us4"/>
+                            <constraint firstItem="45c-iq-1lP" firstAttribute="top" secondItem="VaN-eU-qta" secondAttribute="bottom" constant="30" id="y4x-nw-ZBQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule Pick Up" id="rJp-bw-4f5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8d3-1G-mY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2316" y="411.544227886057"/>
+            <point key="canvasLocation" x="-2039.2" y="409.7451274362819"/>
         </scene>
         <!--Order Table View Controller-->
         <scene sceneID="aLl-dZ-cer">
@@ -626,7 +624,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tgX-kd-e5t" id="Soi-1K-zw5">
-                                            <frame key="frameInset" width="343" height="43"/>
+                                            <frame key="frameInset" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhm-wl-cRc" userLabel="amountLabel">
@@ -724,7 +722,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="or1-Da-3yr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="or1-Da-3yr">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Schedule Delivery">
@@ -735,7 +733,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                     <segue destination="hic-HG-tL6" kind="show" identifier="gotoScheduleDeliveryFromMyOrder" id="692-UT-woH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0A-gU-yeA">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0A-gU-yeA">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="   Schedule Pickup">
@@ -837,6 +835,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about-photo" translatesAutoresizingMaskIntoConstraints="NO" id="w2g-mi-X6r">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="Xke-x0-AKd"/>
+                                    <constraint firstAttribute="width" constant="375" id="yql-8t-jND"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eWr-Km-K6d">
@@ -855,6 +854,10 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8f-nR-WfM">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="216" id="IJW-M8-VuF"/>
+                                                    <constraint firstAttribute="height" constant="36" id="uEY-PU-yDb"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Monday-Thursday     7 AM - 8 PM">
                                                         <attributes>
@@ -906,12 +909,15 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                             <constraint firstItem="S8f-nR-WfM" firstAttribute="leading" secondItem="DhY-Fk-p1d" secondAttribute="leading" constant="2" id="LEB-qL-fRc"/>
                                             <constraint firstItem="06B-xO-ZYc" firstAttribute="trailing" secondItem="f6c-Oy-CYd" secondAttribute="trailing" id="Yn3-rP-WMx"/>
                                             <constraint firstAttribute="height" constant="180" id="ZKm-oj-VeI"/>
+                                            <constraint firstItem="S8f-nR-WfM" firstAttribute="centerX" secondItem="DhY-Fk-p1d" secondAttribute="centerX" id="fq7-ql-4EX"/>
+                                            <constraint firstItem="S8f-nR-WfM" firstAttribute="top" secondItem="5C2-6z-zW8" secondAttribute="bottom" id="mCM-sE-Qfa"/>
                                             <constraint firstItem="5C2-6z-zW8" firstAttribute="leading" secondItem="DhY-Fk-p1d" secondAttribute="leading" constant="49" id="uXF-Y1-mu3"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="DhY-Fk-p1d" firstAttribute="top" secondItem="eWr-Km-K6d" secondAttribute="top" id="Il1-GO-aKw"/>
+                                    <constraint firstItem="DhY-Fk-p1d" firstAttribute="top" secondItem="eWr-Km-K6d" secondAttribute="top" id="KLN-p5-qjN"/>
                                     <constraint firstItem="DhY-Fk-p1d" firstAttribute="centerX" secondItem="eWr-Km-K6d" secondAttribute="centerX" id="pff-nR-JTU"/>
                                 </constraints>
                             </stackView>
@@ -920,8 +926,8 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="w2g-mi-X6r" secondAttribute="trailing" id="8nq-yc-TAP"/>
                             <constraint firstItem="w2g-mi-X6r" firstAttribute="leading" secondItem="Pqu-Yn-0Kg" secondAttribute="leading" id="JNx-ds-bja"/>
+                            <constraint firstItem="V3f-2U-f84" firstAttribute="centerX" secondItem="Pqu-Yn-0Kg" secondAttribute="centerX" id="ZXR-3k-JxJ"/>
                             <constraint firstItem="w2g-mi-X6r" firstAttribute="leading" secondItem="Pqu-Yn-0Kg" secondAttribute="leading" id="bRg-eo-99E"/>
-                            <constraint firstItem="V3f-2U-f84" firstAttribute="centerX" secondItem="w2g-mi-X6r" secondAttribute="centerX" id="cUK-8F-4vf"/>
                             <constraint firstItem="HQn-Fm-HJx" firstAttribute="top" secondItem="eWr-Km-K6d" secondAttribute="bottom" constant="64" id="dob-g6-GVk"/>
                             <constraint firstItem="eWr-Km-K6d" firstAttribute="centerX" secondItem="V3f-2U-f84" secondAttribute="centerX" id="nCv-In-MJ8"/>
                             <constraint firstItem="w2g-mi-X6r" firstAttribute="top" secondItem="yI4-Mv-iIp" secondAttribute="bottom" id="u2K-0U-ijK"/>
@@ -961,10 +967,10 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuTableCell" id="5ua-fu-JiV">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ua-fu-JiV" id="ucv-xT-MOU">
-                                            <frame key="frameInset" width="1000" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTf-FZ-Cme">
@@ -995,6 +1001,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                     <constraint firstAttribute="width" constant="130" id="Kba-UE-Rjh"/>
                                     <constraint firstAttribute="height" constant="50" id="wgk-XL-cCo"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Order Now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1085,6 +1092,10 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDy-CO-6qX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="XAR-Gi-6fd"/>
+                                    <constraint firstAttribute="width" constant="45" id="enR-lP-Nhx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1166,6 +1177,10 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'd Love to Hear From You!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-mG-lT4">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="3Bf-or-qx2"/>
+                                    <constraint firstAttribute="width" constant="221.5" id="ESt-6Y-ugU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1175,6 +1190,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Poq-pX-NwL"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Send Message">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1183,6 +1199,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bl1-SL-bmw" firstAttribute="centerY" secondItem="vAn-HJ-hSc" secondAttribute="centerY" id="0cc-zK-71w"/>
+                            <constraint firstItem="nDy-CO-6qX" firstAttribute="leading" secondItem="SDu-bi-ctf" secondAttribute="leadingMargin" constant="14" id="17z-Sb-jiZ"/>
                             <constraint firstItem="t9R-Cc-pug" firstAttribute="baseline" secondItem="vAn-HJ-hSc" secondAttribute="baseline" id="3S7-Ox-Hg1"/>
                             <constraint firstItem="oJg-R6-hPV" firstAttribute="centerY" secondItem="vNi-hg-mKk" secondAttribute="centerY" id="4Mn-Ob-hSU"/>
                             <constraint firstItem="vAn-HJ-hSc" firstAttribute="leading" secondItem="bl1-SL-bmw" secondAttribute="trailing" constant="2" id="5EP-qB-Owr"/>
@@ -1193,8 +1210,8 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             <constraint firstItem="t9R-Cc-pug" firstAttribute="top" secondItem="J4K-rz-1Ee" secondAttribute="bottom" constant="8" symbolic="YES" id="Ada-cB-ROV"/>
                             <constraint firstItem="3p7-Je-em2" firstAttribute="leading" secondItem="cy3-s7-ui9" secondAttribute="trailing" constant="42" id="Aph-26-vtv"/>
                             <constraint firstItem="3p7-Je-em2" firstAttribute="baseline" secondItem="cy3-s7-ui9" secondAttribute="baseline" id="BVc-8T-sP9"/>
+                            <constraint firstItem="TAA-zB-XKL" firstAttribute="leading" secondItem="nDy-CO-6qX" secondAttribute="trailing" constant="11" id="BbI-bR-8ro"/>
                             <constraint firstItem="1MQ-dw-qHY" firstAttribute="baseline" secondItem="cyr-yN-2d7" secondAttribute="baseline" id="BgW-Rn-ONF"/>
-                            <constraint firstItem="Yi0-Nt-NLA" firstAttribute="centerX" secondItem="amQ-mG-lT4" secondAttribute="centerX" id="C6v-gs-1GO"/>
                             <constraint firstItem="vAn-HJ-hSc" firstAttribute="top" secondItem="eCv-dX-lDW" secondAttribute="top" constant="-2" id="Cbw-dx-2oa"/>
                             <constraint firstItem="rPN-wE-Xrb" firstAttribute="trailing" secondItem="cyr-yN-2d7" secondAttribute="trailing" id="Ec0-mX-Pi6"/>
                             <constraint firstItem="J4K-rz-1Ee" firstAttribute="leading" secondItem="xtu-MT-rbC" secondAttribute="leading" id="HAH-4l-lhg"/>
@@ -1203,7 +1220,6 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             <constraint firstItem="bl1-SL-bmw" firstAttribute="top" secondItem="SDu-bi-ctf" secondAttribute="top" constant="247" id="Qrm-IZ-F5i"/>
                             <constraint firstItem="1MQ-dw-qHY" firstAttribute="leading" secondItem="xtu-MT-rbC" secondAttribute="leading" id="RxP-8O-ZOu"/>
                             <constraint firstItem="oJg-R6-hPV" firstAttribute="leading" secondItem="vNi-hg-mKk" secondAttribute="trailing" constant="3" id="SJR-MU-2cd"/>
-                            <constraint firstItem="TAA-zB-XKL" firstAttribute="leading" secondItem="nDy-CO-6qX" secondAttribute="trailing" constant="11" id="UHu-3a-t5x"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ifi-MS-DJz" secondAttribute="trailing" constant="72" id="V5G-ZY-fse"/>
                             <constraint firstItem="t9R-Cc-pug" firstAttribute="leading" secondItem="eCv-dX-lDW" secondAttribute="trailing" constant="4" id="Wty-rI-JXX"/>
                             <constraint firstItem="vAn-HJ-hSc" firstAttribute="trailing" secondItem="64a-gN-zVR" secondAttribute="trailing" id="XNu-hQ-E8w"/>
@@ -1211,12 +1227,13 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             <constraint firstItem="rPN-wE-Xrb" firstAttribute="top" secondItem="cyr-yN-2d7" secondAttribute="bottom" constant="2" id="Zca-gf-QJJ"/>
                             <constraint firstItem="eao-sZ-Xu0" firstAttribute="top" secondItem="Yi0-Nt-NLA" secondAttribute="bottom" constant="8" symbolic="YES" id="aoL-gB-RJq"/>
                             <constraint firstItem="rPN-wE-Xrb" firstAttribute="trailing" secondItem="TAA-zB-XKL" secondAttribute="trailing" id="bJe-ms-IzC"/>
+                            <constraint firstItem="amQ-mG-lT4" firstAttribute="top" secondItem="Y7M-Vh-XUn" secondAttribute="bottom" constant="52" id="bdF-VL-2bC"/>
                             <constraint firstItem="1MQ-dw-qHY" firstAttribute="firstBaseline" secondItem="cyr-yN-2d7" secondAttribute="baseline" id="eYK-4N-f9h"/>
                             <constraint firstItem="vNi-hg-mKk" firstAttribute="top" secondItem="nDy-CO-6qX" secondAttribute="bottom" constant="5" id="elU-hE-ch6"/>
-                            <constraint firstItem="cyr-yN-2d7" firstAttribute="top" secondItem="TAA-zB-XKL" secondAttribute="bottom" constant="34" id="epa-eY-FxI"/>
                             <constraint firstItem="oJg-R6-hPV" firstAttribute="top" secondItem="TAA-zB-XKL" secondAttribute="bottom" constant="2" id="gdU-uL-s2s"/>
                             <constraint firstItem="rPN-wE-Xrb" firstAttribute="trailing" secondItem="oJg-R6-hPV" secondAttribute="trailing" id="geX-K7-EcL"/>
                             <constraint firstAttribute="bottom" secondItem="eao-sZ-Xu0" secondAttribute="bottom" constant="93" id="gvL-7i-RR6"/>
+                            <constraint firstItem="nDy-CO-6qX" firstAttribute="top" secondItem="Y7M-Vh-XUn" secondAttribute="bottom" constant="89" id="iBD-BK-MIK"/>
                             <constraint firstItem="3p7-Je-em2" firstAttribute="leading" secondItem="SDu-bi-ctf" secondAttribute="leading" constant="164" id="iv1-en-C8g"/>
                             <constraint firstItem="cyr-yN-2d7" firstAttribute="leading" secondItem="1MQ-dw-qHY" secondAttribute="trailing" constant="8" symbolic="YES" id="iwx-m3-tro"/>
                             <constraint firstItem="1MQ-dw-qHY" firstAttribute="top" secondItem="oJg-R6-hPV" secondAttribute="bottom" constant="5" id="jgr-PX-68f"/>
@@ -1231,10 +1248,12 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                             <constraint firstItem="bl1-SL-bmw" firstAttribute="firstBaseline" secondItem="eCv-dX-lDW" secondAttribute="firstBaseline" id="q2N-yF-Ppc"/>
                             <constraint firstItem="J4K-rz-1Ee" firstAttribute="top" secondItem="xtu-MT-rbC" secondAttribute="bottom" constant="8" symbolic="YES" id="qht-7v-RKI"/>
                             <constraint firstItem="Yi0-Nt-NLA" firstAttribute="top" secondItem="t9R-Cc-pug" secondAttribute="bottom" constant="8" symbolic="YES" id="rVN-mt-JT9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TAA-zB-XKL" secondAttribute="trailing" constant="14" id="rew-6R-mtS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rPN-wE-Xrb" secondAttribute="trailing" constant="14" id="rjx-GP-Nqr"/>
                             <constraint firstItem="TAA-zB-XKL" firstAttribute="top" secondItem="amQ-mG-lT4" secondAttribute="bottom" constant="8" symbolic="YES" id="st2-pN-nvj"/>
                             <constraint firstItem="eao-sZ-Xu0" firstAttribute="centerX" secondItem="SDu-bi-ctf" secondAttribute="centerX" constant="-0.5" id="ukV-VI-21W"/>
                             <constraint firstItem="rPN-wE-Xrb" firstAttribute="top" secondItem="1MQ-dw-qHY" secondAttribute="bottom" constant="8" symbolic="YES" id="uvd-iL-Ml4"/>
+                            <constraint firstItem="amQ-mG-lT4" firstAttribute="centerX" secondItem="SDu-bi-ctf" secondAttribute="centerX" id="z3Y-rQ-paQ"/>
                             <constraint firstItem="3p7-Je-em2" firstAttribute="centerX" secondItem="eao-sZ-Xu0" secondAttribute="centerX" constant="11" id="zec-Hw-fNh"/>
                         </constraints>
                     </view>
@@ -1274,13 +1293,14 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-HK-aJr">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="T8o-NL-ZGx"/>
-                                </constraints>
-                            </mapView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-HK-aJr"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEH-xz-Dya">
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.32156862749999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="PRj-aI-lpH"/>
+                                    <constraint firstAttribute="height" constant="50" id="VD2-Ak-PLM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Order Now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1288,17 +1308,18 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="2v8-HK-aJr" firstAttribute="leading" secondItem="EHQ-aR-GTh" secondAttribute="leading" id="6IR-Eq-K4s"/>
                             <constraint firstItem="YRo-Em-z8f" firstAttribute="leading" secondItem="EHQ-aR-GTh" secondAttribute="leadingMargin" constant="51" id="DL9-pv-92X"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UEH-xz-Dya" secondAttribute="trailing" constant="27" id="KRc-7q-JN8"/>
-                            <constraint firstItem="bWM-47-aOf" firstAttribute="top" secondItem="UEH-xz-Dya" secondAttribute="bottom" constant="62" id="LTr-2D-vMu"/>
-                            <constraint firstItem="2v8-HK-aJr" firstAttribute="leading" secondItem="EHQ-aR-GTh" secondAttribute="leadingMargin" constant="7" id="MiR-Sb-rwS"/>
-                            <constraint firstItem="UEH-xz-Dya" firstAttribute="leading" secondItem="EHQ-aR-GTh" secondAttribute="leadingMargin" constant="35" id="QAV-rE-XoF"/>
-                            <constraint firstItem="UEH-xz-Dya" firstAttribute="top" secondItem="2v8-HK-aJr" secondAttribute="bottom" constant="8" symbolic="YES" id="XIF-ji-iJV"/>
+                            <constraint firstItem="bWM-47-aOf" firstAttribute="top" secondItem="UEH-xz-Dya" secondAttribute="bottom" constant="50" id="N9v-3k-zeT"/>
+                            <constraint firstAttribute="trailing" secondItem="2v8-HK-aJr" secondAttribute="trailing" id="PJM-OB-Vod"/>
+                            <constraint firstItem="UEH-xz-Dya" firstAttribute="centerX" secondItem="EHQ-aR-GTh" secondAttribute="centerX" id="QgT-SN-CUk"/>
+                            <constraint firstItem="UEH-xz-Dya" firstAttribute="top" secondItem="2v8-HK-aJr" secondAttribute="bottom" constant="37" id="U7D-KK-xDC"/>
                             <constraint firstItem="x1c-ty-7ET" firstAttribute="top" secondItem="OKH-ij-wvn" secondAttribute="bottom" constant="29" id="XXE-HP-1gX"/>
+                            <constraint firstItem="2v8-HK-aJr" firstAttribute="leading" secondItem="EHQ-aR-GTh" secondAttribute="leading" id="oRU-wX-zQH"/>
+                            <constraint firstAttribute="trailing" secondItem="2v8-HK-aJr" secondAttribute="trailing" id="qiy-pk-NPr"/>
                             <constraint firstItem="YRo-Em-z8f" firstAttribute="top" secondItem="x1c-ty-7ET" secondAttribute="bottom" constant="8" id="rQU-lQ-87X"/>
+                            <constraint firstItem="2v8-HK-aJr" firstAttribute="top" secondItem="YRo-Em-z8f" secondAttribute="bottom" constant="18" id="rSu-Am-mwM"/>
                             <constraint firstItem="x1c-ty-7ET" firstAttribute="leading" secondItem="EHQ-aR-GTh" secondAttribute="leadingMargin" constant="51" id="vaq-Co-gW0"/>
-                            <constraint firstItem="2v8-HK-aJr" firstAttribute="centerX" secondItem="EHQ-aR-GTh" secondAttribute="centerX" id="xPR-YM-B7Y"/>
-                            <constraint firstItem="2v8-HK-aJr" firstAttribute="top" secondItem="YRo-Em-z8f" secondAttribute="bottom" constant="8" symbolic="YES" id="xbN-Nb-c37"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lcations" id="ntQ-By-7yP"/>
@@ -1327,10 +1348,10 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dailyDelectablesCell" id="Hfc-VQ-C5Q">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hfc-VQ-C5Q" id="1T0-60-OgK">
-                                            <frame key="frameInset" width="1000" height="43"/>
+                                            <frame key="frameInset" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1343,6 +1364,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                     <constraint firstAttribute="height" constant="50" id="FTT-6Z-HLL"/>
                                     <constraint firstAttribute="width" constant="130" id="d7J-IQ-xFv"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Order Now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1374,17 +1396,25 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uly-64-nev">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uly-64-nev">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="CVV:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETU-8V-SHG">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="3Bf-CV-VNP"/>
+                                    <constraint firstAttribute="height" constant="21" id="dq2-t9-Nlj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="752" text="Expiration Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BS-Bx-ohm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="752" text="Exp. Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BS-Bx-ohm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="OAk-B8-PvA"/>
+                                    <constraint firstAttribute="height" constant="21" id="rV6-uk-59M"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1419,16 +1449,19 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-LK-Q0h">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvM-cq-fwK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="het-yf-6eW"/>
+                                    <constraint firstAttribute="width" constant="51" id="wYu-ey-V43"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvE-kS-Cgi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="9bb-9X-te9"/>
+                                    <constraint firstAttribute="height" constant="30" id="D2K-c7-Tdt"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1438,7 +1471,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" text="Apartment Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS7-0Y-rn6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" text="Apt #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS7-0Y-rn6">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="153" id="sLU-4C-U63"/>
                                 </constraints>
@@ -1518,76 +1551,85 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQu-EM-PvF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="53I-QW-etc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Axw-LQ-uXr" firstAttribute="leading" secondItem="bw9-iX-HI2" secondAttribute="trailing" constant="2" id="0Q3-si-4c8"/>
-                            <constraint firstItem="Skw-nZ-Pif" firstAttribute="leading" secondItem="Qtg-eo-a4V" secondAttribute="leading" id="0ka-cu-fOm"/>
+                            <constraint firstItem="ETU-8V-SHG" firstAttribute="top" secondItem="9BS-Bx-ohm" secondAttribute="bottom" constant="12" id="1yE-1c-Ks2"/>
                             <constraint firstItem="dgZ-4i-Xt6" firstAttribute="top" secondItem="FVm-83-FUt" secondAttribute="bottom" constant="8" symbolic="YES" id="2J9-dq-Ocj"/>
+                            <constraint firstItem="Uly-64-nev" firstAttribute="top" secondItem="x8M-eI-hXi" secondAttribute="bottom" constant="22" id="409-2V-kxL"/>
+                            <constraint firstItem="uNG-Eh-yYR" firstAttribute="trailing" secondItem="twc-ah-cIw" secondAttribute="trailing" id="4Vb-1M-RgL"/>
+                            <constraint firstItem="Uly-64-nev" firstAttribute="leading" secondItem="hTW-uN-fII" secondAttribute="leadingMargin" constant="14" id="4XA-t5-KO0"/>
                             <constraint firstItem="UtO-rs-qkR" firstAttribute="leading" secondItem="HS7-0Y-rn6" secondAttribute="leading" id="4yU-nz-qi0"/>
                             <constraint firstItem="dgZ-4i-Xt6" firstAttribute="leading" secondItem="iYI-1F-vfo" secondAttribute="trailing" constant="4" id="5RY-Cz-8nf"/>
                             <constraint firstItem="HS7-0Y-rn6" firstAttribute="centerY" secondItem="Ivn-MJ-pRD" secondAttribute="centerY" id="5jb-cX-7MY"/>
+                            <constraint firstItem="uNG-Eh-yYR" firstAttribute="top" secondItem="A5T-Ow-uEm" secondAttribute="bottom" constant="20" id="5pc-nq-6Eh"/>
                             <constraint firstItem="HS7-0Y-rn6" firstAttribute="top" secondItem="dgZ-4i-Xt6" secondAttribute="bottom" constant="3" id="8IH-1G-hH1"/>
-                            <constraint firstItem="Skw-nZ-Pif" firstAttribute="leading" secondItem="Uly-64-nev" secondAttribute="leading" id="9fB-7k-n3t"/>
+                            <constraint firstItem="Qtg-eo-a4V" firstAttribute="centerX" secondItem="gBY-iU-8Vr" secondAttribute="centerX" id="8Rf-72-A8a"/>
+                            <constraint firstItem="ETU-8V-SHG" firstAttribute="leading" secondItem="gBY-iU-8Vr" secondAttribute="leading" id="8iJ-nD-O2g"/>
                             <constraint firstItem="fKp-FZ-Ia7" firstAttribute="trailing" secondItem="sTJ-Wb-1WN" secondAttribute="trailing" id="9tq-zQ-DWt"/>
-                            <constraint firstItem="cqA-LK-Q0h" firstAttribute="leading" secondItem="hvM-cq-fwK" secondAttribute="leading" id="AqF-eb-dkM"/>
+                            <constraint firstItem="Qtg-eo-a4V" firstAttribute="leading" secondItem="Skw-nZ-Pif" secondAttribute="leading" id="CG4-MG-FtW"/>
                             <constraint firstItem="UtO-rs-qkR" firstAttribute="firstBaseline" secondItem="bw9-iX-HI2" secondAttribute="firstBaseline" id="CGe-CZ-UkB"/>
-                            <constraint firstItem="9BS-Bx-ohm" firstAttribute="leading" secondItem="ETU-8V-SHG" secondAttribute="leading" id="DMw-b9-dhD"/>
                             <constraint firstItem="x8M-eI-hXi" firstAttribute="top" secondItem="HS7-0Y-rn6" secondAttribute="bottom" constant="8" symbolic="YES" id="DNB-wD-5D3"/>
-                            <constraint firstItem="hvM-cq-fwK" firstAttribute="trailing" secondItem="sTJ-Wb-1WN" secondAttribute="trailing" id="Dq5-9n-L3s"/>
-                            <constraint firstItem="cqA-LK-Q0h" firstAttribute="trailing" secondItem="hTW-uN-fII" secondAttribute="trailingMargin" id="Dqi-TC-OkU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uNG-Eh-yYR" secondAttribute="trailing" constant="14" id="DwT-vj-31Z"/>
                             <constraint firstItem="UtO-rs-qkR" firstAttribute="baseline" secondItem="bw9-iX-HI2" secondAttribute="baseline" id="E3j-R7-HCg"/>
-                            <constraint firstItem="Uly-64-nev" firstAttribute="leading" secondItem="9BS-Bx-ohm" secondAttribute="leading" id="EvF-U5-3lN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fvE-kS-Cgi" secondAttribute="trailing" constant="14" id="Fm7-JT-F9k"/>
+                            <constraint firstItem="cqA-LK-Q0h" firstAttribute="leading" secondItem="ETU-8V-SHG" secondAttribute="trailing" constant="5" id="GsI-ED-WNE"/>
+                            <constraint firstItem="Qtg-eo-a4V" firstAttribute="leading" secondItem="hTW-uN-fII" secondAttribute="leadingMargin" constant="14" id="Hge-dE-jz2"/>
                             <constraint firstItem="MRj-xN-WqQ" firstAttribute="top" secondItem="twc-ah-cIw" secondAttribute="bottom" constant="2" id="JHq-NP-lMs"/>
-                            <constraint firstItem="fvE-kS-Cgi" firstAttribute="leading" secondItem="ETU-8V-SHG" secondAttribute="trailing" constant="6" id="JUw-Mt-z3t"/>
+                            <constraint firstItem="cQu-EM-PvF" firstAttribute="leading" secondItem="9BS-Bx-ohm" secondAttribute="trailing" constant="8" symbolic="YES" id="JLl-ye-N6n"/>
                             <constraint firstItem="HS7-0Y-rn6" firstAttribute="top" secondItem="iYI-1F-vfo" secondAttribute="bottom" constant="8" symbolic="YES" id="KWK-0F-gQG"/>
-                            <constraint firstItem="hvM-cq-fwK" firstAttribute="leading" secondItem="fvE-kS-Cgi" secondAttribute="trailing" constant="62" id="LNm-EZ-5eA"/>
-                            <constraint firstItem="Qtg-eo-a4V" firstAttribute="top" secondItem="sJs-2M-Lqd" secondAttribute="bottom" constant="68" id="Ldh-JR-FfC"/>
+                            <constraint firstItem="uNG-Eh-yYR" firstAttribute="bottom" secondItem="Skw-nZ-Pif" secondAttribute="bottom" id="Ku6-ea-YLT"/>
+                            <constraint firstItem="A5T-Ow-uEm" firstAttribute="leading" secondItem="Qtg-eo-a4V" secondAttribute="trailing" constant="20" id="OMq-Hf-sfQ"/>
                             <constraint firstItem="twc-ah-cIw" firstAttribute="trailing" secondItem="MRj-xN-WqQ" secondAttribute="trailing" id="OXL-wJ-jvl"/>
-                            <constraint firstItem="cqA-LK-Q0h" firstAttribute="leading" secondItem="Uly-64-nev" secondAttribute="trailing" constant="6" id="Or5-CI-U7x"/>
                             <constraint firstItem="x8M-eI-hXi" firstAttribute="baseline" secondItem="Axw-LQ-uXr" secondAttribute="baseline" id="QRK-HM-Xkc"/>
-                            <constraint firstItem="uNG-Eh-yYR" firstAttribute="trailing" secondItem="twc-ah-cIw" secondAttribute="trailing" id="RYy-ta-NWR"/>
-                            <constraint firstItem="x8M-eI-hXi" firstAttribute="bottom" secondItem="Axw-LQ-uXr" secondAttribute="bottom" id="SGK-Ea-y0m"/>
-                            <constraint firstItem="ETU-8V-SHG" firstAttribute="top" secondItem="9BS-Bx-ohm" secondAttribute="bottom" constant="8" symbolic="YES" id="Szy-hE-5Dq"/>
-                            <constraint firstItem="cqA-LK-Q0h" firstAttribute="trailing" secondItem="hvM-cq-fwK" secondAttribute="trailing" id="Tr9-V9-toF"/>
+                            <constraint firstItem="cqA-LK-Q0h" firstAttribute="top" secondItem="9BS-Bx-ohm" secondAttribute="bottom" constant="4" id="SuP-jf-DhU"/>
                             <constraint firstItem="gBY-iU-8Vr" firstAttribute="top" secondItem="Skw-nZ-Pif" secondAttribute="bottom" constant="5" id="Uch-If-pTr"/>
-                            <constraint firstItem="uNG-Eh-yYR" firstAttribute="leading" secondItem="Qtg-eo-a4V" secondAttribute="trailing" constant="7" id="VZt-f5-pZp"/>
-                            <constraint firstItem="fKp-FZ-Ia7" firstAttribute="leading" secondItem="ETU-8V-SHG" secondAttribute="leading" id="WA5-nO-vEt"/>
-                            <constraint firstItem="Axw-LQ-uXr" firstAttribute="leading" secondItem="sTJ-Wb-1WN" secondAttribute="leading" id="Wnt-H1-jGe"/>
+                            <constraint firstItem="fvE-kS-Cgi" firstAttribute="leading" secondItem="Uly-64-nev" secondAttribute="trailing" constant="8" id="V8U-Y2-3uz"/>
                             <constraint firstItem="FVm-83-FUt" firstAttribute="top" secondItem="gBY-iU-8Vr" secondAttribute="bottom" constant="7" id="YCq-mU-ao0"/>
                             <constraint firstItem="MRj-xN-WqQ" firstAttribute="trailing" secondItem="dgZ-4i-Xt6" secondAttribute="trailing" id="YT8-XR-PSG"/>
-                            <constraint firstItem="UtO-rs-qkR" firstAttribute="centerX" secondItem="ETU-8V-SHG" secondAttribute="centerX" id="bjL-SD-nCj"/>
-                            <constraint firstItem="Qtg-eo-a4V" firstAttribute="leading" secondItem="hTW-uN-fII" secondAttribute="leadingMargin" constant="14" id="cmr-YD-43G"/>
+                            <constraint firstItem="fvE-kS-Cgi" firstAttribute="trailing" secondItem="Axw-LQ-uXr" secondAttribute="trailing" id="Ygx-ke-a3L"/>
+                            <constraint firstItem="fvE-kS-Cgi" firstAttribute="top" secondItem="Axw-LQ-uXr" secondAttribute="bottom" constant="18" id="aOB-LK-BTy"/>
+                            <constraint firstItem="cqA-LK-Q0h" firstAttribute="top" secondItem="9BS-Bx-ohm" secondAttribute="bottom" constant="4" id="bzx-uO-4bI"/>
+                            <constraint firstItem="9BS-Bx-ohm" firstAttribute="top" secondItem="Uly-64-nev" secondAttribute="bottom" constant="12" id="cLe-B8-seb"/>
+                            <constraint firstItem="cQu-EM-PvF" firstAttribute="bottom" secondItem="9BS-Bx-ohm" secondAttribute="bottom" id="cWJ-c3-2o3"/>
                             <constraint firstItem="iYI-1F-vfo" firstAttribute="leading" secondItem="HS7-0Y-rn6" secondAttribute="leading" id="cti-ms-F8y"/>
                             <constraint firstItem="MRj-xN-WqQ" firstAttribute="leading" secondItem="FVm-83-FUt" secondAttribute="trailing" constant="8" symbolic="YES" id="ctr-Cy-bfm"/>
-                            <constraint firstItem="A5T-Ow-uEm" firstAttribute="centerX" secondItem="hTW-uN-fII" secondAttribute="centerX" id="dEm-XJ-ksb"/>
-                            <constraint firstItem="cqA-LK-Q0h" firstAttribute="top" secondItem="x8M-eI-hXi" secondAttribute="bottom" constant="68" id="ebF-07-LvD"/>
                             <constraint firstItem="MRj-xN-WqQ" firstAttribute="baseline" secondItem="FVm-83-FUt" secondAttribute="firstBaseline" id="fKm-je-wVC"/>
-                            <constraint firstItem="uNG-Eh-yYR" firstAttribute="top" secondItem="A5T-Ow-uEm" secondAttribute="bottom" constant="2" id="gL7-RA-bHg"/>
-                            <constraint firstItem="Skw-nZ-Pif" firstAttribute="top" secondItem="Qtg-eo-a4V" secondAttribute="bottom" constant="8" symbolic="YES" id="hK5-AV-F5k"/>
-                            <constraint firstItem="sTJ-Wb-1WN" firstAttribute="top" secondItem="hvM-cq-fwK" secondAttribute="bottom" constant="8" symbolic="YES" id="hXU-Dx-Q2h"/>
-                            <constraint firstItem="Uly-64-nev" firstAttribute="centerY" secondItem="cqA-LK-Q0h" secondAttribute="centerY" id="haJ-1a-Tp0"/>
+                            <constraint firstItem="Uly-64-nev" firstAttribute="bottom" secondItem="fvE-kS-Cgi" secondAttribute="bottom" id="hKJ-mC-cIy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sTJ-Wb-1WN" secondAttribute="trailing" constant="4" id="iGo-d1-UPF"/>
                             <constraint firstItem="UtO-rs-qkR" firstAttribute="centerY" secondItem="x8M-eI-hXi" secondAttribute="centerY" id="iW0-ac-0mr"/>
-                            <constraint firstItem="ETU-8V-SHG" firstAttribute="centerY" secondItem="fvE-kS-Cgi" secondAttribute="centerY" id="imM-QV-6tt"/>
                             <constraint firstItem="x8M-eI-hXi" firstAttribute="leading" secondItem="UtO-rs-qkR" secondAttribute="trailing" constant="4" id="jLV-xU-sgy"/>
                             <constraint firstItem="bw9-iX-HI2" firstAttribute="centerY" secondItem="Axw-LQ-uXr" secondAttribute="centerY" id="jQx-tf-hQq"/>
-                            <constraint firstItem="9BS-Bx-ohm" firstAttribute="top" secondItem="Uly-64-nev" secondAttribute="bottom" constant="8" symbolic="YES" id="kKq-bD-VwF"/>
-                            <constraint firstItem="twc-ah-cIw" firstAttribute="top" secondItem="uNG-Eh-yYR" secondAttribute="bottom" constant="22" id="keX-rr-Uqx"/>
                             <constraint firstItem="dgZ-4i-Xt6" firstAttribute="trailing" secondItem="Ivn-MJ-pRD" secondAttribute="trailing" id="kfS-rc-I8o"/>
-                            <constraint firstItem="Qtg-eo-a4V" firstAttribute="centerX" secondItem="gBY-iU-8Vr" secondAttribute="centerX" id="l8c-PG-BlS"/>
                             <constraint firstItem="gBY-iU-8Vr" firstAttribute="centerY" secondItem="twc-ah-cIw" secondAttribute="centerY" id="nng-B7-qD2"/>
+                            <constraint firstItem="cQu-EM-PvF" firstAttribute="top" secondItem="fvE-kS-Cgi" secondAttribute="bottom" constant="3" id="ocb-4h-wXD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uNG-Eh-yYR" secondAttribute="trailing" constant="14" id="pf0-7i-rHs"/>
                             <constraint firstItem="gBY-iU-8Vr" firstAttribute="leading" secondItem="hTW-uN-fII" secondAttribute="leadingMargin" constant="15" id="qnD-6Y-TZ5"/>
+                            <constraint firstItem="Qtg-eo-a4V" firstAttribute="bottom" secondItem="A5T-Ow-uEm" secondAttribute="bottom" id="rKy-ib-Gkg"/>
                             <constraint firstItem="bw9-iX-HI2" firstAttribute="leading" secondItem="x8M-eI-hXi" secondAttribute="trailing" constant="5" id="s0Y-xb-66G"/>
                             <constraint firstItem="FVm-83-FUt" firstAttribute="leading" secondItem="hTW-uN-fII" secondAttribute="leadingMargin" constant="13" id="shQ-lG-voN"/>
+                            <constraint firstItem="ETU-8V-SHG" firstAttribute="bottom" secondItem="cqA-LK-Q0h" secondAttribute="bottom" constant="-1" id="t1B-nN-Pcn"/>
                             <constraint firstItem="Ivn-MJ-pRD" firstAttribute="top" secondItem="dgZ-4i-Xt6" secondAttribute="bottom" constant="2" id="tOa-KV-Yw4"/>
                             <constraint firstItem="FVm-83-FUt" firstAttribute="leading" secondItem="iYI-1F-vfo" secondAttribute="leading" id="tWZ-An-eDq"/>
+                            <constraint firstItem="ETU-8V-SHG" firstAttribute="leading" secondItem="9BS-Bx-ohm" secondAttribute="leading" constant="1" id="wgn-lq-6Fz"/>
                             <constraint firstItem="iYI-1F-vfo" firstAttribute="centerY" secondItem="dgZ-4i-Xt6" secondAttribute="centerY" id="x3c-hE-ISg"/>
                             <constraint firstItem="2xe-9I-uen" firstAttribute="top" secondItem="fKp-FZ-Ia7" secondAttribute="bottom" constant="42" id="xKd-nG-Fo1"/>
                             <constraint firstItem="bw9-iX-HI2" firstAttribute="top" secondItem="Ivn-MJ-pRD" secondAttribute="bottom" constant="8" symbolic="YES" id="xhH-eO-kDE"/>
+                            <constraint firstItem="cqA-LK-Q0h" firstAttribute="leading" secondItem="ETU-8V-SHG" secondAttribute="trailing" constant="5" id="y6s-3P-rdS"/>
                             <constraint firstItem="twc-ah-cIw" firstAttribute="leading" secondItem="gBY-iU-8Vr" secondAttribute="trailing" constant="3" id="z5d-jU-85f"/>
                             <constraint firstItem="Ivn-MJ-pRD" firstAttribute="trailing" secondItem="Axw-LQ-uXr" secondAttribute="trailing" id="z5k-Kg-Flg"/>
                             <constraint firstItem="fKp-FZ-Ia7" firstAttribute="top" secondItem="sTJ-Wb-1WN" secondAttribute="bottom" constant="8" symbolic="YES" id="zU3-Ik-b6f"/>
+                            <constraint firstItem="Qtg-eo-a4V" firstAttribute="top" secondItem="sJs-2M-Lqd" secondAttribute="bottom" constant="47" id="zaA-LH-NIK"/>
+                            <constraint firstItem="9BS-Bx-ohm" firstAttribute="leading" secondItem="hTW-uN-fII" secondAttribute="leadingMargin" constant="14" id="zaR-TN-VFp"/>
+                            <constraint firstItem="uNG-Eh-yYR" firstAttribute="leading" secondItem="twc-ah-cIw" secondAttribute="leading" id="zpT-H4-hFF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Payment Method" id="ghq-s4-jLA"/>
@@ -1650,7 +1692,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cupcakes Cubed" id="7hX-in-TjS">
-                        <barButtonItem key="rightBarButtonItem" image="info" style="plain" id="NI2-rV-uJs">
+                        <barButtonItem key="rightBarButtonItem" image="hamburger" style="plain" id="NI2-rV-uJs">
                             <connections>
                                 <segue destination="RfH-tZ-RJq" kind="show" identifier="goToInfoFromWelcome" animates="NO" id="Ggz-jo-Twg"/>
                             </connections>
@@ -1918,17 +1960,22 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
         <image name="contact-us" width="43" height="80"/>
         <image name="cupcake-photo-banner" width="350" height="175"/>
         <image name="daily-delectables" width="50" height="80"/>
-        <image name="info" width="30" height="30"/>
+        <image name="facebook" width="125" height="125"/>
+        <image name="flickr" width="12" height="12"/>
+        <image name="hamburger" width="30" height="30"/>
+        <image name="info" width="29" height="29"/>
         <image name="locations" width="62" height="80"/>
         <image name="logo" width="92" height="93"/>
         <image name="menu" width="70" height="80"/>
         <image name="my-bag" width="20" height="30"/>
+        <image name="pinterest" width="18" height="18"/>
         <image name="shop" width="24" height="27"/>
         <image name="three-cupcakes" width="510" height="175"/>
+        <image name="twitter" width="125" height="106"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="W3X-yp-y4a"/>
         <segue reference="rlf-oB-8NC"/>
-        <segue reference="f03-GT-qsX"/>
         <segue reference="M78-CG-AEw"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
