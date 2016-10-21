@@ -49,8 +49,19 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 		
 		self.tableView.reloadData()
 		
-		ShoppingCart.sharedInstance.items += loadOrderFromArchiver()!
-
+		if loadOrderFromArchiver() != nil {
+		
+			ShoppingCart.sharedInstance.items += loadOrderFromArchiver()!
+		} else {
+			
+			let alertController = UIAlertController(title: "Hey AppCoda", message: "What do you want to do?", preferredStyle: .alert)
+			
+			let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+			alertController.addAction(defaultAction)
+			
+			present(alertController, animated: true, completion: nil)
+			
+		}
 	}
 
 //	func refresh(sender: AnyObject) {
@@ -90,7 +101,11 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 		
 		cell.amountLabel.text = String(describing: order.amount)
 		
-		cell.priceLabel.text = String(describing: order.price)
+		let formatter = NumberFormatter()
+		
+		formatter.numberStyle = .currency
+		
+		cell.priceLabel.text = (formatter.string(from: order.price as NSNumber))
 		
 //		if imageCache.object(forKey: order.image as NSString) != nil {
 //			

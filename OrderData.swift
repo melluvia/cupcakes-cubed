@@ -76,7 +76,6 @@ class OrderData: NSCoding {
 
 		// Must call designated initializer.
 		self.init(flavor: flavor!, amount: amount!, price: price, image: image!)
-		
-		print(self.flavor)
+
 	}
 }

@@ -158,8 +158,6 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 			default: cupcakeView.image = #imageLiteral(resourceName: "french-riviera-cupcake")
 			}
 			
-
-			
 		} else {
 			
 			priceAmount = 3.50 * Double(amountNumber[row])
@@ -171,9 +169,49 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 	@IBAction func addOrder(_ sender: UIButton) {
 				
 		let image = cupcakeView.image
-		let amount = PickerView.selectedRow(inComponent: 0)
-		let flavor = String(PickerView.selectedRow(inComponent: 1))
-		let price = priceAmount //Double(self.price.text ?? "")
+//		let amount = Int(PickerView.selectedRow(inComponent: 0))
+		var amount = Int(PickerView.selectedRow(inComponent: 0))
+		if amount == Int(PickerView.selectedRow(inComponent: 0)) {
+			switch amount {
+			case 0: amount = 1
+			case 1: amount = 2
+			case 2: amount = 3
+			case 3: amount = 4
+			case 4: amount = 5
+			case 5: amount = 6
+			case 6: amount = 7
+			case 7: amount = 8
+			case 8: amount = 9
+			case 9: amount = 10
+			case 10: amount = 11
+			case 11: amount = 12
+			case 12: amount = 13
+			case 13: amount = 14
+			default: amount = 1
+			}
+		}
+		var flavor = String(PickerView.selectedRow(inComponent: 1))
+		if flavor == String(PickerView.selectedRow(inComponent: 1)) {
+			switch flavor {
+			case "0": flavor = "Chocolate"
+			case "1": flavor = "Wedding Cake"
+			case "2": flavor = "Red Velvet"
+			case "3": flavor = "Lemon Drop"
+			case "4": flavor = "Tuxedo"
+			case "5": flavor = "Oreo"
+			case "6": flavor = "Carrot Cake"
+			case "7": flavor = "Vanilla Chocolate"
+			case "8": flavor = "French Riviera"
+			case "9": flavor = "Peanut Butter Jelly"
+			case "10": flavor = "Black Raspberry Chip"
+			case "11": flavor = "Almond Creme"
+			case "12": flavor = "Vanilla Wafer"
+			case "13": flavor = "Snickerdoodle"
+			default: flavor = "Chocolate Cupcake"
+			}
+		}
+
+		let price = priceAmount
 		
 		order = OrderData(flavor: flavor, amount: amount, price: price, image: image!)
 		
@@ -184,10 +222,13 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 			self.performSegue(withIdentifier: "gotoMyOrder", sender: self)
 			
 		} else {
-			// TOOO: Alert
+			let alertController = UIAlertController(title: "Alert", message: "Unable to add order. Please try again later.", preferredStyle: .alert)
+			
+			let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+			alertController.addAction(defaultAction)
+			
+			present(alertController, animated: true, completion: nil)
 		}
-
-
 	}
 }
 
