@@ -25,8 +25,20 @@ class ShoppingCart {
 //	}()
 	
 	//MARK: Local Variable
-	
+
 	var items : [OrderData]
+
+	var total: Double {
+
+		var total = 0.0
+		
+		for item in self.items {
+			
+			total += item.price
+		}
+		
+		return total
+	}
 	
 	//MARK: Init
 	

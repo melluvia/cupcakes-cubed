@@ -14,6 +14,7 @@ class OrderData: NSCoding {
 	var amount: Int
 	var price: Double
 	var image: UIImage
+
 	
 	// MARK: Archiving Paths
  

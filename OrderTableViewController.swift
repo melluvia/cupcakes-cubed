@@ -10,10 +10,9 @@ import UIKit
 
 class OrderTableViewController: UIViewController, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
 
-	@IBOutlet weak var tax: UILabel!
-	@IBOutlet weak var deliveryCost: UILabel!
 	@IBOutlet weak var tableView: UITableView!
 	
+	@IBOutlet weak var total: UILabel!
 	//var order = ShoppingCart.sharedInstance.shoppingCartArray
 	
 	func onEditBtn(sender: UIBarButtonItem) {
@@ -54,7 +53,7 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 			ShoppingCart.sharedInstance.items += loadOrderFromArchiver()!
 		} else {
 			
-			let alertController = UIAlertController(title: "Hey AppCoda", message: "What do you want to do?", preferredStyle: .alert)
+			let alertController = UIAlertController(title: "Apologies!", message: "We're having trouble showing your order right now. Please try again later.", preferredStyle: .alert)
 			
 			let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
 			alertController.addAction(defaultAction)
@@ -62,6 +61,11 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 			present(alertController, animated: true, completion: nil)
 			
 		}
+
+		let formatter = NumberFormatter()
+		formatter.numberStyle = .currency
+		total.text = formatter.string(from: ShoppingCart.sharedInstance.total as NSNumber)
+//		total.text = String(ShoppingCart.sharedInstance.total)
 	}
 
 //	func refresh(sender: AnyObject) {
