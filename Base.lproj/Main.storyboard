@@ -71,7 +71,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhs-VF-TtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2162.4000000000001" y="-1585.4572713643179"/>
+            <point key="canvasLocation" x="-2310" y="-1588"/>
         </scene>
         <!--Order View Controller-->
         <scene sceneID="hNz-n2-bh7">
@@ -625,7 +625,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tgX-kd-e5t" id="Soi-1K-zw5">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOu-pH-B7G">
@@ -964,10 +964,10 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuTableCell" id="5ua-fu-JiV">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ua-fu-JiV" id="ucv-xT-MOU">
-                                            <frame key="frameInset" width="1000" height="44"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTf-FZ-Cme">
@@ -1187,7 +1187,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
         <!--Locations-->
         <scene sceneID="NuC-HX-Zbg">
             <objects>
-                <viewController id="Ogl-Lc-5S2" customClass="LocationsViewController" sceneMemberID="viewController">
+                <viewController id="Ogl-Lc-5S2" customClass="LocationsViewController" customModule="cupcakes_cubed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OKH-ij-wvn"/>
                         <viewControllerLayoutGuide type="bottom" id="bWM-47-aOf"/>
@@ -1227,7 +1227,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                     <segue destination="9pv-A4-QxB" kind="show" id="iCr-Qm-bxc"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-HK-aJr"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-HK-aJr" customClass="LocationsViewController"/>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1244,6 +1244,9 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Locations" id="ntQ-By-7yP"/>
+                    <connections>
+                        <outlet property="mapView" destination="2v8-HK-aJr" id="lOO-oH-Jsi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNj-9n-qj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1797,7 +1800,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Ogl-Lc-5S2" kind="show" id="HNF-aq-op9"/>
+                                            <segue destination="Ogl-Lc-5S2" kind="show" id="MRP-Di-RgW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtf-Pk-jfL" userLabel="menu">
@@ -1947,7 +1950,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Tvd-sQ-Mpm"/>
-        <segue reference="NDG-G2-w16"/>
+        <segue reference="iCr-Qm-bxc"/>
         <segue reference="xK7-4o-Cf7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
