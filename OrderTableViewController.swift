@@ -53,13 +53,12 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 			ShoppingCart.sharedInstance.items += loadOrderFromArchiver()!
 		} else {
 			
-			let alertController = UIAlertController(title: "Apologies!", message: "We're having trouble showing your order right now. Please try again later.", preferredStyle: .alert)
-			
-			let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-			alertController.addAction(defaultAction)
-			
-			present(alertController, animated: true, completion: nil)
-			
+//			let alertController = UIAlertController(title: "Apologies!", message: "We're having trouble showing your order right now. Please try again later.", preferredStyle: .alert)
+//			
+//			let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//			alertController.addAction(defaultAction)
+//			
+//			present(alertController, animated: true, completion: nil)
 		}
 
 		let formatter = NumberFormatter()
@@ -129,7 +128,7 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 		if editingStyle == .delete {
 			
 			// Find the OrderData in the data source that we wish to delete.
-			//let orderToRemove = order[indexPath.row]
+//			let orderToRemove = order[indexPath.row]
 			
 			tableView.beginUpdates()
 			// Delete the row from the data source

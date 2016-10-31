@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrderData: NSCoding {
+class OrderData: NSObject, NSCoding {
 	
 	var flavor: String
 	var amount: Int
