@@ -6,4 +6,8 @@
 //  Copyright © 2016 Melissa Phillips Design. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class WelcomeScreenViewController: UIViewController {
+	
+}

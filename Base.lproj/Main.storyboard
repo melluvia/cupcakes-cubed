@@ -491,12 +491,12 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
         <!--Tab Bar Controller-->
         <scene sceneID="eeh-z8-iX2">
             <objects>
-                <tabBarController id="v0B-Wp-ISo" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MyTabBarController" id="v0B-Wp-ISo" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="LME-yc-6pQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cyan="0.12" magenta="0.86607217788696289" yellow="0.94672417640686035" black="0.35209682583808899" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <color key="barTintColor" red="0.70980392160000005" green="0.066666666669999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
@@ -514,7 +514,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
         <scene sceneID="qDo-uD-HBZ">
             <objects>
                 <navigationController hidesBarsOnTap="YES" hidesBarsWhenKeyboardAppears="YES" id="a6u-rb-sCq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="info" image="info" id="yeF-4A-7Bd"/>
+                    <tabBarItem key="tabBarItem" title="info" image="info" selectedImage="info-selected" id="yeF-4A-7Bd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DS7-b8-c3d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -622,10 +622,10 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderTableViewCell" id="tgX-kd-e5t" userLabel="OrderTableViewCell" customClass="OrderTableViewCell" customModule="cupcakes_cubed" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tgX-kd-e5t" id="Soi-1K-zw5">
-                                            <frame key="frameInset" width="1000" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOu-pH-B7G">
@@ -967,7 +967,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ua-fu-JiV" id="ucv-xT-MOU">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTf-FZ-Cme">
@@ -1275,7 +1275,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                                         <rect key="frame" x="0.0" y="28" width="342" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hfc-VQ-C5Q" id="1T0-60-OgK">
-                                            <frame key="frameInset" width="342" height="43"/>
+                                            <frame key="frameInset" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1617,7 +1617,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
         <!--Cupcakes Cubed-->
         <scene sceneID="Fhr-ts-w04">
             <objects>
-                <viewController id="xTz-xs-bV7" customClass="WelcomeScreenViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeScreenViewController" id="xTz-xs-bV7" customClass="WelcomeScreenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hsb-mc-qKi"/>
                         <viewControllerLayoutGuide type="bottom" id="Q0H-a2-wZd"/>
@@ -1628,6 +1628,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cupcake-photo-banner" translatesAutoresizingMaskIntoConstraints="NO" id="CuD-IJ-9QS"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="FHk-TB-caj">
+                                <color key="tintColor" red="0.47058823529411764" green="0.0039215686274509803" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="oKh-Sx-73L"/>
                                     <constraint firstAttribute="width" constant="85" id="p9h-V9-5h6"/>
@@ -1683,7 +1684,7 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
         <scene sceneID="0K4-6c-AXx">
             <objects>
                 <navigationController id="SCN-dc-YvD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shop" image="shop" id="aza-0e-mvw"/>
+                    <tabBarItem key="tabBarItem" title="Shop" image="shop" selectedImage="shop-selected" id="aza-0e-mvw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="x9W-nA-m2K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1698,13 +1699,13 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDk-v4-oDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2833" y="-462"/>
+            <point key="canvasLocation" x="-2834" y="-464"/>
         </scene>
         <!--My Order-->
         <scene sceneID="qer-yW-VWo">
             <objects>
                 <navigationController definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="oKK-7y-VUS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Order" image="my-bag" id="1gN-54-ZlW"/>
+                    <tabBarItem key="tabBarItem" title="My Order" image="my-bag" selectedImage="my-bag-selected" id="1gN-54-ZlW"/>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="603"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wrn-Wb-hI0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1939,19 +1940,22 @@ Cupcakes can be customized any way you like, for example, we can decorate with y
         <image name="facebook" width="125" height="125"/>
         <image name="hamburger" width="30" height="30"/>
         <image name="info" width="29" height="29"/>
+        <image name="info-selected" width="30" height="30"/>
         <image name="locations" width="62" height="80"/>
         <image name="logo" width="92" height="93"/>
         <image name="menu" width="70" height="80"/>
         <image name="my-bag" width="20" height="30"/>
+        <image name="my-bag-selected" width="20" height="30"/>
         <image name="pinterest" width="18" height="18"/>
         <image name="shop" width="24" height="27"/>
+        <image name="shop-selected" width="24" height="27"/>
         <image name="three-cupcakes" width="510" height="175"/>
         <image name="twitter" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tvd-sQ-Mpm"/>
-        <segue reference="iCr-Qm-bxc"/>
         <segue reference="xK7-4o-Cf7"/>
+        <segue reference="Tvd-sQ-Mpm"/>
+        <segue reference="C0f-1c-9O7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
