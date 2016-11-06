@@ -29,7 +29,11 @@ class OrderTableViewController: UIViewController, UINavigationControllerDelegate
 	//var amountCache
 	//var priceCache
 
-
+	//update the table view data when segueing from the tab bar
+	override func viewWillAppear(_ animated: Bool) {
+		self.tableView.reloadData()
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
